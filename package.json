@@ -1,0 +1,27 @@
+{
+  "name": "cheesethefirst",
+  "version": "1.0.0",
+  "description": "This app will help facilitate fundraising for the organization \"She's The First\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "keywords": [
+    "grilled",
+    "cheese",
+    "shes",
+    "the",
+    "first"
+  ],
+  "author": "Daniel \"Chavo\" Chavez",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-route": "^1.5.6",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "path": "^0.12.7",
+    "pg": "^4.5.6"
+  }
+}
