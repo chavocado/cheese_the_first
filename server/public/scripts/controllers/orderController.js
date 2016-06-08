@@ -3,10 +3,10 @@ myApp.controller('OrderController', ['$scope', '$http', 'DataFactory', function(
   //scope variable & injection
   $scope.dataFactory = DataFactory;
   $scope.currentOrder = {};
-  $scope.grilledCheeses = [];
+  $scope.grilledCheeses = $scope.dataFactory.grilledCheeses;
   $scope.gcCount = 0;
   $scope.gcTotal = 0;
-  
+
   $scope.submitOrder = function () {
   var data = $scope.currentOrder;
   $http.post('/orders', data)

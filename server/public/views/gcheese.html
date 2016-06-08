@@ -25,19 +25,19 @@
     <legend>GRILLED CHEESE</legend>
       <ol>
         <li>
-          <label for="grilled_cheese1">Uh-huh Honey</label>
+          <label for="grilled_cheese1">{{grilledCheeses.gc1}}</label>
           <input type="number" min="0" max="10" id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.grilled_cheese1" />
         </li>
         <li>
-          <label for="grilled_cheese2">Bravo Italiano</label>
+          <label for="grilled_cheese2">{{grilledCheeses.gc2}}</label>
           <input type="number" min="0" max="10" id="currentGC2" name="grilled_cheese2" ng-model="currentOrder.grilled_cheese2" />
         </li>
         <li>
-          <label for="grilled_cheese3">3 Cheese</label>
+          <label for="grilled_cheese3">{{grilledCheeses.gc3}}</label>
           <input type="number" min="0" max="10" id="currentGC3" name="grilled_cheese3" ng-model="currentOrder.grilled_cheese3" />
         </li>
         <li>
-          <label for="grilled_cheese4">Cozy Campfire</label>
+          <label for="grilled_cheese4">{{grilledCheeses.gc4}}</label>
           <input type="number" min="0" max="10" id="currentGC4" name="grilled_cheese4" ng-model="currentOrder.grilled_cheese4" />
         </li>
       </ol>
@@ -54,11 +54,11 @@
             <legend>Payment type</legend>
     			     <ol>
     				    <li>
-    					    <input id="cash" name="payment" type="radio" value="cash">
+    					    <input id="cash" name="payment" type="radio" value="cash" ng-model="currentOrder.payment">
     					     <label for="cash">Cash</label>
     				    </li>
     				    <li>
-                  <input id="card" name="payment" type="radio" value="card">
+                  <input id="card" name="payment" type="radio" value="card" ng-model="currentOrder.payment">
                   <label for="card">Card</label>
                 </li>
                </ol>
