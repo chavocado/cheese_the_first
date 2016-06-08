@@ -1,9 +1,21 @@
 myApp.controller('OrderController', ['$scope', '$http', 'DataFactory', function($scope, $http, DataFactory) {
   console.log('order controller running');
-  // $scope.dataFactory = DataFactory;
-  //
-  // $scope.favorites = [];
-  // $scope.favCount = 0;
+  //scope variable & injection
+  $scope.dataFactory = DataFactory;
+  $scope.currentOrder = {};
+  $scope.grilledCheeses = [];
+  $scope.gcCount = 0;
+  $scope.gcTotal = 0;
+  
+  $scope.submitOrder = function () {
+  var data = $scope.currentOrder;
+  $http.post('/orders', data)
+    .then(function () {
+      console.log('POST /orders');
+      //getOrders();
+    });
+};
+
   //
   // if($scope.dataFactory.factoryGetFavorites() === undefined) {
   //   $scope.dataFactory.factoryRefreshFavoriteData().then(function() {

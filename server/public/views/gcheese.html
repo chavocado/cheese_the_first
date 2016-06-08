@@ -3,29 +3,69 @@
 <div ng-include="'/views/templates/nav.html'"></div>
 
 <form id="gcheeseForm">
-  <label for="first_name">First Name</label>
-  <input type="text" id="currentCustomerFirst" name="first_name" ng-model="currentCustomer.first_name" />
+  <fieldset>
+    <legend>Your Details</legend>
+      <ol>
+          <li>
+            <label for="name">Name</label>
+            <input type="text" placeholder="First Name" id="currentOrderFirst" name="first_name" ng-model="currentOrder.first_name" />
+            <input type="text" placeholder="Last Name" id="currentOrderLast" name="last_name" ng-model="currentOrder.last_name" />
+          </li>
+          <li>
+            <label for="address">Address</label>
+            <input type="text" id="currentOrderAddress" name="address" ng-model="currentOrder.address" />
+          </li>
+          <li>
+            <label for="city">City</label>
+            <input type="text" id="currentOrderCity" name="city" ng-model="currentOrder.city" />
+          </li>
+      </ol>
+  </fieldset>
+  <fieldset>
+    <legend>GRILLED CHEESE</legend>
+      <ol>
+        <li>
+          <label for="grilled_cheese1">Uh-huh Honey</label>
+          <input type="number" min="0" max="10" id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.grilled_cheese1" />
+        </li>
+        <li>
+          <label for="grilled_cheese2">Bravo Italiano</label>
+          <input type="number" min="0" max="10" id="currentGC2" name="grilled_cheese2" ng-model="currentOrder.grilled_cheese2" />
+        </li>
+        <li>
+          <label for="grilled_cheese3">3 Cheese</label>
+          <input type="number" min="0" max="10" id="currentGC3" name="grilled_cheese3" ng-model="currentOrder.grilled_cheese3" />
+        </li>
+        <li>
+          <label for="grilled_cheese4">Cozy Campfire</label>
+          <input type="number" min="0" max="10" id="currentGC4" name="grilled_cheese4" ng-model="currentOrder.grilled_cheese4" />
+        </li>
+      </ol>
+  </fieldset>
+  <fieldset>
+    <legend>Payment</legend>
+      <ol>
+        <li>
+          <p>Total ${{gcTotal}}</p>
+        </li>
 
-  <label for="last_name">Last Name</label>
-  <input type="text" id="currentCustomerLast" name="last_name" ng-model="currentCustomer.last_name" />
-
-  <label for="address">Address</label>
-  <input type="text" id="currentCustomerAddress" name="address" ng-model="currentCustomer.address" />
-
-  <label for="city">City</label>
-  <input type="text" id="currentCustomerCity" name="city" ng-model="currentCustomer.city" />
-
-  <label for="grilled_cheese1">Uh-huh Honey</label>
-  <input type="text" id="currentGC1" name="grilled_cheese1" ng-model="currentCustomer.grilled_cheese1" />
-
-  <label for="grilled_cheese2">Bravo Italiano</label>
-  <input type="text" id="currentGC2" name="grilled_cheese2" ng-model="currentCustomer.grilled_cheese2" />
-
-  <label for="grilled_cheese3">3 Cheese</label>
-  <input type="text" id="currentGC3" name="grilled_cheese3" ng-model="currentCustomer.grilled_cheese3" />
-
-  <label for="grilled_cheese4">Cozy Campfire</label>
-  <input type="text" id="currentGC4" name="grilled_cheese4" ng-model="currentCustomer.grilled_cheese4" />
+        <li>
+          <fieldset>
+            <legend>Payment type</legend>
+    			     <ol>
+    				    <li>
+    					    <input id="cash" name="payment" type="radio" value="cash">
+    					     <label for="cash">Cash</label>
+    				    </li>
+    				    <li>
+                  <input id="card" name="payment" type="radio" value="card">
+                  <label for="card">Card</label>
+                </li>
+               </ol>
+          </fieldset>
+        </li>
+    </ol>
+  </fieldset>
 
   <button ng-click="submitOrder()">Submit</button>
 </form>
