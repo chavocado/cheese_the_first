@@ -5,18 +5,23 @@ myApp.controller('OrderController', ['$scope', '$http', 'DataFactory', function(
   $scope.currentOrder = {};
   $scope.grilledCheeses = $scope.dataFactory.grilledCheeses;
   $scope.gcCount = 0;
-  $scope.gcTotal = 0;
+  $scope.currentOrder.gcTotal = 0;
 
   $scope.submitOrder = function () {
   var data = $scope.currentOrder;
+  console.log(data);
   $http.post('/orders', data)
     .then(function () {
       console.log('POST /orders');
       //getOrders();
+      //$scope.redirect();
     });
-};
+  };
+  //redirect function
+  $scope.redirect = function(){
+  $location.url('/thank-you');
+  };
 
-  //
   // if($scope.dataFactory.factoryGetFavorites() === undefined) {
   //   $scope.dataFactory.factoryRefreshFavoriteData().then(function() {
   //     $scope.favorites = $scope.dataFactory.factoryGetFavorites();

@@ -12,22 +12,30 @@ router.post('/', function (req, res) {
       res.sendStatus(500);
     }
 
-    client.query('INSERT INTO customers (first_name, last_name, address, city) ' +
-                  'VALUES ($1, $2, $3, $4)',
+    client.query( 'INSERT INTO customers (first_name, last_name, address, city) ' +
+                  'VALUES ($1, $2, $3, $4) returning id;',
                    [order.first_name, order.last_name, order.address, order.city],
                  function (err, result) {
-                   done();
-
                    if (err) {
                      res.sendStatus(500);
                      return;
                    }
-
-                   res.sendStatus(201);
-                 });
+                   console.log('result',result.rows[0].id);
+                   client.query('INSERT INTO orders (customer_id, payment_type, total, gc1, gc2, gc3, gc4, status)' +
+                                'VALUES ($1, $2, $3, $4, $5, $6, $7)',
+                                [result.rows[0].id, order.payment, order.gcTotal, order.gc1, order.gc2, order.gc3, order.gc4, order.status],
+                              function (err, result){
+                                done();
+                                if (err) {
+                                  res.sendStatus(500);
+                                  return;
+                                }
+                                  res.sendStatus(201);
+                              });
+                 }
+               );
   });
 });
-
 
 
 module.exports = router;

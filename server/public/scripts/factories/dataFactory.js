@@ -2,10 +2,18 @@ myApp.factory('DataFactory', ['$http', function($http) {
   console.log('dataFactory running');
 
   var grilledCheeses = {
-    gc1 :'Uh-huh Honey',
-    gc2 :'Bravo Italiano',
-    gc3 :'3 Cheese',
-    gc4 :'Cozy Campfire'
+    gc1 : {name :'Uh-huh Honey',
+           price : 3
+    },
+    gc2 : {name :'Bravo Italiano',
+           price : 3
+    },
+    gc3 :  {name :'3 Cheese',
+           price : 3
+    },
+    gc4 :  {name :'Cozy Campfire',
+           price : 3
+    }
   };
 
  return {
