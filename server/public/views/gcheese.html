@@ -26,19 +26,43 @@
       <ol>
         <li>
           <label for="grilled_cheese1">{{grilledCheeses.gc1.name}}</label>
-          <input type="number" min="0" max="10" id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.gc1" />
+            <ul>
+              <li>Description</li>
+              <li>Price ${{grilledCheeses.gc1.price}}</li>
+            </ul>
+          <select id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.gc1" ng-change="addGC()">
+            <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
+          </select>
         </li>
         <li>
           <label for="grilled_cheese2">{{grilledCheeses.gc2.name}}</label>
-          <input type="number" min="0" max="10" id="currentGC2" name="grilled_cheese2" ng-model="currentOrder.gc2" />
+            <ul>
+              <li>Description</li>
+              <li>Price ${{grilledCheeses.gc2.price}}</li>
+            </ul>
+          <select id="currentGC2" name="grilled_cheese2" ng-model="currentOrder.gc2" ng-change="addGC()">
+            <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
+          </select>
         </li>
         <li>
           <label for="grilled_cheese3">{{grilledCheeses.gc3.name}}</label>
-          <input type="number" min="0" max="10" id="currentGC3" name="grilled_cheese3" ng-model="currentOrder.gc3" />
+            <ul>
+              <li>Description</li>
+              <li>Price ${{grilledCheeses.gc3.price}}</li>
+            </ul>
+          <select id="currentGC3" name="grilled_cheese3" ng-model="currentOrder.gc3" ng-change="addGC()">
+            <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
+          </select>
         </li>
         <li>
           <label for="grilled_cheese4">{{grilledCheeses.gc4.name}}</label>
-          <input type="number" min="0" max="10" id="currentGC4" name="grilled_cheese4" ng-model="currentOrder.gc4" />
+            <ul>
+              <li>Description</li>
+              <li>Price ${{grilledCheeses.gc4.price}}</li>
+            </ul>
+          <select id="currentGC4" name="grilled_cheese4" ng-model="currentOrder.gc4" ng-change="addGC()">
+            <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
+          </select>
         </li>
       </ol>
   </fieldset>
@@ -46,7 +70,7 @@
     <legend>Payment</legend>
       <ol>
         <li>
-          <p>Total ${{gcTotal}}</p>
+          <p>Total ${{currentOrder.gcTotal}}</p>
         </li>
 
         <li>
