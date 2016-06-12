@@ -78,12 +78,17 @@
             <legend>Payment type</legend>
     			     <ol>
     				    <li>
-    					    <input id="cash" name="payment" type="radio" value="cash" ng-model="currentOrder.payment">
+    					    <input id="cash" name="payment" type="radio" value="cash" checked ng-model="currentOrder.payment">
     					     <label for="cash">Cash</label>
     				    </li>
     				    <li>
                   <input id="card" name="payment" type="radio" value="card" ng-model="currentOrder.payment">
                   <label for="card">Card</label>
+                </li>
+                <li>
+                  <ul>
+                    <li> Required</li>
+                  </ul>
                 </li>
                </ol>
           </fieldset>

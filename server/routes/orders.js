@@ -22,8 +22,8 @@ router.post('/', function (req, res) {
                    }
                    console.log('result',result.rows[0].id);
                    client.query('INSERT INTO orders (customer_id, payment_type, total, gc1, gc2, gc3, gc4, status)' +
-                                'VALUES ($1, $2, $3, $4, $5, $6, $7)',
-                                [result.rows[0].id, order.payment, order.gcTotal, order.gc1, order.gc2, order.gc3, order.gc4, order.status],
+                                'VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
+                                [result.rows[0].id, order.payment, order.gcTotal, order.gc1, order.gc2, order.gc3, order.gc4, 'In Progress'],
                               function (err, result){
                                 done();
                                 if (err) {
@@ -37,5 +37,23 @@ router.post('/', function (req, res) {
   });
 });
 
+router.get('/', function(req, res) {
+    pg.connect(connectionString, function(err, client, done) {
+        if (err) {
+            res.sendStatus(500);
+        }
+        client.query("SELECT * FROM customers " +
+                     "JOIN orders ON customers.id = orders.customer_id;", function(err, result) {
+            if (err) {
+                console.log(err, "FOOL");
+            }
+            done();
+            //console.log(result);
+            res.send(result.rows);
+
+        });
+    });
+
+});
 
 module.exports = router;
