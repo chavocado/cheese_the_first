@@ -13,19 +13,58 @@ myApp.controller('AdminController', ['$scope', '$http', 'DataFactory', function(
   function getOrders() {
     $http.get('/orders')
       .then(function (response) {
-        console.log(response);
         response.data.forEach(function (order) {
-          console.log('premoment', order.order_date);
-          order.moment_date = moment(order.order_date, "YYYY-MM-DDTHH:mm:ss.SZ").format("dddd, MMMM Do YYYY, h:mm:ss a");
-          console.log('order', order.order_date);
-          console.log('moment', order.moment_date);
+          order.moment_date = moment(order.order_date, "YYYY-MM-DDTHH:mm:ss.SZ").format("MMMM Do YYYY, h:mm a");
+          // console.log('order', order.order_date);
+          // console.log('moment', order.moment_date);
         });
-
         $scope.orders = response.data;
         console.log('GET /orders ', response.data);
 
       });
   }
+
+  $scope.updateStatus = function(order) {
+    console.log('update', order.id);
+    if (order.status == 'Recieved') {
+      order.status = 'Cooking';
+      $http.put('/orders/status', order)
+         .then(function (response) {
+         getOrders();
+         return;
+         });
+    } else if (order.status == 'Cooking') {
+      order.status = 'Delivery';
+      $http.put('/orders/status', order)
+         .then(function (response) {
+         getOrders();
+         return;
+         });
+    } else if (order.status == 'Delivery') {
+      order.status = 'Complete';
+      $http.put('/orders/status', order)
+         .then(function (response) {
+         getOrders();
+         return;
+         });
+    } else {
+      order.status = 'Recieved';
+      $http.put('/orders/status', order)
+         .then(function (response) {
+         getOrders();
+         return;
+         });
+    }
+  };
+
+  $scope.deleteOrder = function(id) {
+    console.log('delete', id);
+    $http.delete('/orders/' + id)
+       .then(function (response) {
+       getOrders();
+       return;
+       });
+  };
 
 
 }]);

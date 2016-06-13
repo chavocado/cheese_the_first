@@ -1,4 +1,4 @@
-myApp.controller('OrderController', ['$scope', '$http', 'DataFactory', function($scope, $http, DataFactory) {
+myApp.controller('OrderController', ['$scope', '$http', '$location', 'DataFactory', function($scope, $http, $location, DataFactory) {
   console.log('order controller running');
   //injections
   $scope.dataFactory = DataFactory;
@@ -28,13 +28,13 @@ myApp.controller('OrderController', ['$scope', '$http', 'DataFactory', function(
   $http.post('/orders', data)
     .then(function () {
       console.log('POST /orders');
-      //$scope.redirect();
+      $scope.redirect();
     });
   };
 
   //redirect function
   $scope.redirect = function(){
-  $location.url('/thank-you');
+  $location.path('/thank-you');
   };
 
 

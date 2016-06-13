@@ -2,38 +2,38 @@
 <div ng-include="'/views/templates/admin-nav.html'"></div>
 
 <div>
-  <table>
+  <table st-table="orderSnap" st-safe-src="orders">
     <thead>
       <tr>
-        <th>ID</th>
-        <th>Order Time</th>
+        <th st-sort="id">ID</th>
+        <th st-sort="moment_date" >Order Time</th>
         <th>Name</th>
         <th>Address</th>
-        <th>GC1</th>
-        <th>GC2</th>
-        <th>GC3</th>
-        <th>GC4</th>
-        <th>Order Total</th>
-        <th>Payment Type</th>
-        <th>Order Status</th>
+        <th st-sort="gc1">GC1</th>
+        <th st-sort="gc2">GC2</th>
+        <th st-sort="gc3">GC3</th>
+        <th st-sort="gc4">GC4</th>
+        <th st-sort="total">Order Total</th>
+        <th st-sort="payment_type">Payment Type</th>
+        <th st-sort="status">Order Status</th>
         <th>UPDATE</th>
         <th>DELETE</th>
       </tr>
     </thead>
-    <tr ng-repeat="order in orders">
-      <td ng-model="order.id">{{order.id}}</td>
-      <td ng-model="order.order_date">{{order.moment_date}}</td>
-      <td ng-model="order.first_name">{{order.first_name}} {{order.last_name}}</td>
-      <td ng-model="order.address">{{order.address}} {{order.city}}</td>
-      <td ng-model="order.gc1">{{order.gc1}}</td>
-      <td ng-model="order.gc2">{{order.gc2}}</td>
-      <td ng-model="order.gc3">{{order.gc3}}</td>
-      <td ng-model="order.gc4">{{order.gc4}}</td>
-      <td ng-model="order.total">{{order.total}}</td>
-      <td ng-model="order.payment_type">{{order.payment_type}}</td>
-      <td ng-model="order.status">{{order.status}}</td>
-      <td><button type="button" name="button">Update</button></td>
-      <td><button type="button" name="button">Delete</button></td>
+    <tr st-select-row="order" st-select-mode="multiple" ng-repeat="order in orderSnap">
+      <td>{{order.id}}</td>
+      <td>{{order.moment_date}}</td>
+      <td>{{order.first_name}} {{order.last_name}}</td>
+      <td>{{order.address}} {{order.city}}</td>
+      <td>{{order.gc1}}</td>
+      <td>{{order.gc2}}</td>
+      <td>{{order.gc3}}</td>
+      <td>{{order.gc4}}</td>
+      <td>{{order.total | currency}}</td>
+      <td>{{order.payment_type | uppercase}}</td>
+      <td >{{order.status}}</td>
+      <td><button ng-click="updateStatus(order)">Update</button></td>
+      <td><button ng-click="deleteOrder(order.id)">Delete</button></td>
     </tr>
   </table>
 </div>

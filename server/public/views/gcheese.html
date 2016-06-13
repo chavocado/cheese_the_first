@@ -27,7 +27,7 @@
         <li>
           <label for="grilled_cheese1">{{grilledCheeses.gc1.name}}</label>
             <ul>
-              <li>Description</li>
+              <li>{{grilledCheeses.gc1.description}}</li>
               <li>Price ${{grilledCheeses.gc1.price}}</li>
             </ul>
           <select id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.gc1" ng-change="addGC()">
@@ -37,7 +37,7 @@
         <li>
           <label for="grilled_cheese2">{{grilledCheeses.gc2.name}}</label>
             <ul>
-              <li>Description</li>
+              <li>{{grilledCheeses.gc2.description}}</li>
               <li>Price ${{grilledCheeses.gc2.price}}</li>
             </ul>
           <select id="currentGC2" name="grilled_cheese2" ng-model="currentOrder.gc2" ng-change="addGC()">
@@ -47,7 +47,7 @@
         <li>
           <label for="grilled_cheese3">{{grilledCheeses.gc3.name}}</label>
             <ul>
-              <li>Description</li>
+              <li>{{grilledCheeses.gc3.description}}</li>
               <li>Price ${{grilledCheeses.gc3.price}}</li>
             </ul>
           <select id="currentGC3" name="grilled_cheese3" ng-model="currentOrder.gc3" ng-change="addGC()">
@@ -57,7 +57,7 @@
         <li>
           <label for="grilled_cheese4">{{grilledCheeses.gc4.name}}</label>
             <ul>
-              <li>Description</li>
+              <li>{{grilledCheeses.gc4.description}}</li>
               <li>Price ${{grilledCheeses.gc4.price}}</li>
             </ul>
           <select id="currentGC4" name="grilled_cheese4" ng-model="currentOrder.gc4" ng-change="addGC()">
@@ -78,18 +78,18 @@
             <legend>Payment type</legend>
     			     <ol>
     				    <li>
-    					    <input id="cash" name="payment" type="radio" value="cash" checked ng-model="currentOrder.payment">
+    					    <input id="cash" name="payment" type="radio" value="Cash" checked ng-model="currentOrder.payment">
     					     <label for="cash">Cash</label>
     				    </li>
     				    <li>
-                  <input id="card" name="payment" type="radio" value="card" ng-model="currentOrder.payment">
+                  <input id="card" name="payment" type="radio" value="Card" ng-model="currentOrder.payment">
                   <label for="card">Card</label>
                 </li>
-                <li>
+                <ul>
                   <ul>
                     <li> Required</li>
                   </ul>
-                </li>
+                </ul>
                </ol>
           </fieldset>
         </li>

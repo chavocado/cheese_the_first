@@ -19,13 +19,13 @@ Homepage with Description of Organization:
 A view connected to the nav bar that gives a user some information about the organization.
 
 Stylesheet Integration for Mobile Devices:
-A majority of users who partake in ordering grilled cheeses have been University Students with mobile devices. That being a major tool for users to view and access the web, dedicated stylesheet integration for mobile browsing will be developed.
+A majority of users who partake in ordering grilled cheeses have been University Students with mobile devices. That being a tool for users to view and access the web, dedicated stylesheet integration for mobile browsing.
 
 Editable 4 Item Menu:
-A majority of users who partake in ordering grilled cheeses have been University Students with mobile devices. That being a major tool for users to view and access the web, dedicated stylesheet integration for mobile browsing will be developed.
+An Admin View that will let  will allow said user to edit name, price and description of menu items.
 
 Admin Authorization w/ Views:
-A majority of users who partake in ordering grilled cheeses have been University Students with mobile devices. That being a major tool for users to view and access the web, dedicated stylesheet integration for mobile browsing will be developed.
+Admin authorization/login and verification for admin views.
 
 Assumptions:
 While completing this estimate the following assumptions were made.
@@ -41,6 +41,7 @@ Node
 Express
 Angular
 SQL
+postgres
 Heroku
 Moment.Js
-postgres
+Angular Smart Table
