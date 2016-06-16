@@ -12,9 +12,9 @@ router.post('/', function (req, res) {
       res.sendStatus(500);
     }
 
-    client.query( 'INSERT INTO customers (first_name, last_name, address, city) ' +
+    client.query( 'INSERT INTO customers (full_name, email, address, city) ' +
                   'VALUES ($1, $2, $3, $4) returning id;',
-                   [order.first_name, order.last_name, order.address, order.city],
+                   [order.full_name, order.email, order.address, order.city],
                  function (err, result) {
                    if (err) {
                      res.sendStatus(500);

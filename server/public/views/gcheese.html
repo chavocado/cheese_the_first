@@ -2,67 +2,79 @@
 <div ng-include="'/views/templates/nav.html'"></div>
 
 <div class="gcheese">
+  <div class="gcheeseContainer">
 <form id="gcheeseForm">
   <fieldset>
     <legend>Your Details</legend>
       <ol>
           <li>
             <label for="name">Name</label>
-            <input type="text" placeholder="First Name" id="currentOrderFirst" name="first_name" ng-model="currentOrder.first_name" />
-            <input type="text" placeholder="Last Name" id="currentOrderLast" name="last_name" ng-model="currentOrder.last_name" />
+            <input type="text" placeholder="Full Name" id="currentOrderFirst" name="full_name" ng-model="currentOrder.full_name" required>
+          </li>
+          <li>
+            <label for="email">Email</label>
+            <input type="text" placeholder="email@example.com" id="currentEmail" name="email" ng-model="currentOrder.email">
           </li>
           <li>
             <label for="address">Address</label>
-            <input type="text" id="currentOrderAddress" name="address" ng-model="currentOrder.address" />
+            <input type="text" placeholder="Your Address" id="currentOrderAddress" name="address" ng-model="currentOrder.address" required>
           </li>
           <li>
             <label for="city">City</label>
-            <input type="text" id="currentOrderCity" name="city" ng-model="currentOrder.city" />
+            <input type="text" placeholder="Your City" id="currentOrderCity" name="city" ng-model="currentOrder.city" required>
           </li>
       </ol>
   </fieldset>
   <fieldset>
     <legend>GRILLED CHEESE</legend>
       <ol>
-        <li>
+        <li class="container">
           <label for="grilled_cheese1">{{grilledCheeses.gc1.name}}</label>
             <ul>
               <li>{{grilledCheeses.gc1.description}}</li>
               <li>Price ${{grilledCheeses.gc1.price}}</li>
             </ul>
-          <select id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.gc1" ng-change="addGC()">
-            <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
-          </select>
+          <div class="dropdown">
+            <select class="dropdown-select" id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.gc1" ng-change="addGC()">
+              <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
+            </select>
+          </div>
         </li>
-        <li>
+        <li class="container">
           <label for="grilled_cheese2">{{grilledCheeses.gc2.name}}</label>
             <ul>
               <li>{{grilledCheeses.gc2.description}}</li>
               <li>Price ${{grilledCheeses.gc2.price}}</li>
             </ul>
-          <select id="currentGC2" name="grilled_cheese2" ng-model="currentOrder.gc2" ng-change="addGC()">
-            <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
-          </select>
+          <div class="dropdown">
+            <select class="dropdown-select" id="currentGC2" name="grilled_cheese2" ng-model="currentOrder.gc2" ng-change="addGC()">
+              <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
+            </select>
+          </div>
         </li>
-        <li>
+        <li class="container">
           <label for="grilled_cheese3">{{grilledCheeses.gc3.name}}</label>
             <ul>
               <li>{{grilledCheeses.gc3.description}}</li>
               <li>Price ${{grilledCheeses.gc3.price}}</li>
             </ul>
-          <select id="currentGC3" name="grilled_cheese3" ng-model="currentOrder.gc3" ng-change="addGC()">
-            <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
-          </select>
+          <div class="dropdown">
+            <select class="dropdown-select" id="currentGC3" name="grilled_cheese3" ng-model="currentOrder.gc3" ng-change="addGC()">
+              <option ng-repeat="qty in quantity" placeholder="Quantity" value="{{qty}}">{{qty}}</option>
+            </select>
+          </div>
         </li>
-        <li>
+        <li class="container">
           <label for="grilled_cheese4">{{grilledCheeses.gc4.name}}</label>
             <ul>
               <li>{{grilledCheeses.gc4.description}}</li>
               <li>Price ${{grilledCheeses.gc4.price}}</li>
             </ul>
-          <select id="currentGC4" name="grilled_cheese4" ng-model="currentOrder.gc4" ng-change="addGC()">
-            <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
-          </select>
+          <div class="dropdown">
+            <select class="dropdown-select" id="currentGC4" name="grilled_cheese4" ng-model="currentOrder.gc4" ng-change="addGC()">
+              <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
+            </select>
+          </div>
         </li>
       </ol>
   </fieldset>
@@ -76,26 +88,25 @@
         <li>
           <fieldset>
             <legend>Payment type</legend>
-    			     <ol>
+               <ol>
     				    <li>
-    					    <input id="cash" name="payment" type="radio" value="Cash" checked ng-model="currentOrder.payment">
+    					    <input id="cash" name="payment" type="radio" value="Cash" checked ng-model="currentOrder.payment" required>
     					     <label for="cash">Cash</label>
     				    </li>
     				    <li>
                   <input id="card" name="payment" type="radio" value="Card" ng-model="currentOrder.payment">
                   <label for="card">Card</label>
                 </li>
-                <ul class="square">
-                    <li> Required</li>
-                </ul>
                </ol>
           </fieldset>
         </li>
     </ol>
   </fieldset>
-
-  <button ng-click="submitOrder()">Submit</button>
+  <fieldset>
+    <button ng-click="submitOrder()">Submit</button>
+  </fieldset>
 </form>
+  </div>
 </div>
 
 <div ng-include="'/views/templates/footer.html'"></div>

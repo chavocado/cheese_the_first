@@ -26,9 +26,15 @@ myApp.controller('OrderController', ['$scope', '$http', '$location', 'DataFactor
   var data = $scope.currentOrder;
   console.log(data);
   $http.post('/orders', data)
-    .then(function () {
+    .then(function (response) {
       console.log('POST /orders');
-      $scope.redirect();
+      console.log(response);
+      if (response.status == 201 ) {
+         $location.path('/thank-you');
+      } else {
+        alert('Your order was not recieved!');
+      }
+
     });
   };
 
