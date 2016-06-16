@@ -38,5 +38,4 @@ myApp.controller('OrderController', ['$scope', '$http', '$location', 'DataFactor
   };
 
 
-
 }]);

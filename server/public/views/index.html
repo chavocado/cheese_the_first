@@ -3,21 +3,23 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>CHEESE THE FIRST!</title>
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <!-- Vendors -->
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
     <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
     <script type="text/javascript" src="/vendors/moment.min.js"></script>
     <script type="text/javascript" src="/vendors/smart-table.min.js"></script>
     <!-- Scripts -->
-    <script type="text/javascript" src="/scripts/clientapp.js"></script>
-    <script type="text/javascript" src="/scripts/factories/dataFactory.js"></script>
-    <script type="text/javascript" src="/scripts/controllers/orderController.js"></script>
-    <script type="text/javascript" src="/scripts/controllers/adminController.js"></script>
+    <script type="text/javascript" src="/assets/scripts/clientapp.js"></script>
+    <script type="text/javascript" src="/assets/scripts/factories/dataFactory.js"></script>
+    <script type="text/javascript" src="/assets/scripts/controllers/orderController.js"></script>
+    <script type="text/javascript" src="/assets/scripts/controllers/adminController.js"></script>
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+
 </head>
 <body ng-app="myApp">
 
-    <main ng-view></main>
+    <main class="mainview" ng-view></main>
 
 </body>
 </html>

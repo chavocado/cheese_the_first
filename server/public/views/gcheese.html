@@ -1,7 +1,7 @@
-<h3>ORDER G CHEESE</h3>
 
 <div ng-include="'/views/templates/nav.html'"></div>
 
+<div class="gcheese">
 <form id="gcheeseForm">
   <fieldset>
     <legend>Your Details</legend>
@@ -85,10 +85,8 @@
                   <input id="card" name="payment" type="radio" value="Card" ng-model="currentOrder.payment">
                   <label for="card">Card</label>
                 </li>
-                <ul>
-                  <ul>
+                <ul class="square">
                     <li> Required</li>
-                  </ul>
                 </ul>
                </ol>
           </fieldset>
@@ -98,3 +96,6 @@
 
   <button ng-click="submitOrder()">Submit</button>
 </form>
+</div>
+
+<div ng-include="'/views/templates/footer.html'"></div>
