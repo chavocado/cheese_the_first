@@ -3,7 +3,7 @@ body{
   font-size: 16px;
   line-height: 1.2em;
   color: #fff;
-  background: #fff;
+  background: #404041;
   margin: 0;
   position: relative;
   width: auto;
@@ -12,6 +12,7 @@ body{
   padding-left: 1.5em;
   padding-right: 1.5em;
   background: #A5438B;
+  height: 100%;
 }
 
 /* Forms */
@@ -230,6 +231,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .head-dis{
   text-align: center;
+  background-color: #fff;
 }
 .headlogo {
   width: 50%;
