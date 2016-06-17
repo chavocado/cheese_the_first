@@ -16,9 +16,23 @@ myApp.factory('DataFactory', ['$http', function($http) {
     },
     gc4 :  {name :'Cozy Campfire',
            price : 3,
-           description : 'A s\'mores inspired recipe with melted chocolate chips, crushed graham cracker, and toasty marshmallows.' 
+           description : 'A s\'mores inspired recipe with melted chocolate chips, crushed graham cracker, and toasty marshmallows.'
     }
   };
+
+  // var grilledCheeses = {};
+
+  function getGrilledCheese() {
+    $http.get('/cheese')
+      .then(function (response) {
+        response.data.forEach(function (order) {
+          order.moment_date = moment(order.order_date, "YYYY-MM-DDTHH:mm:ss.SZ").format("MMMM Do YYYY, h:mm a");
+        });
+        $scope.orders = response.data;
+        console.log('GET /sandwich ', response.data);
+
+      });
+  }
 
  return {
    grilledCheeses: grilledCheeses
