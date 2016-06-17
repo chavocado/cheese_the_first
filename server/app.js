@@ -6,7 +6,8 @@ var bodyParser = require('body-parser');
 //route variables
 var index = require('./routes/index');
 var orders = require('./routes/orders');
-
+var connection = require('./modules/connection');
+console.log(connection);
 //set port
 app.set('port', process.env.PORT || 5000);
 

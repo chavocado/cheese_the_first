@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var pg = require('pg');
-var connectionString = 'postgres://localhost:5432/cheese';
+var connectionString = require('../modules/connection');
 
 router.get('/', function(req, res) {
     pg.connect(connectionString, function(err, client, done) {
