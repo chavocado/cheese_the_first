@@ -9,7 +9,7 @@ var orders = require('./routes/orders');
 var connection = require('./modules/connection');
 console.log(connection);
 //set port
-app.set('port', process.env.PORT || 5000);
+app.set('port', process.env.PORT || 5050);
 
 // Serve back static files
 app.use(express.static(path.join(__dirname, './public')));
