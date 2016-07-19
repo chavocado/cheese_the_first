@@ -1,8 +1,8 @@
-var express = require('express');
-var router = express.Router();
-var passport = require('../auth/passport');
-var path = require('path');
-var auth = require('../utils/auth');
+// var express = require('express');
+// var router = express.Router();
+// var passport = require('../auth/passport');
+// var path = require('path');
+// var auth = require('../utils/auth');
 
 // router.get('/login',
 //   passport.authenticate('google', { scope:
@@ -31,4 +31,4 @@ var auth = require('../utils/auth');
 //   res.sendStatus(200); // they made it!
 // });
 
-module.exports = router;
+// module.exports = router;
