@@ -1,5 +1,5 @@
 //dependencies
-var express = require("express");
+var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -13,8 +13,7 @@ console.log(connection);
 var login = require('./routes/login');
 var index = require('./routes/index');
 var orders = require('./routes/orders');
-
-
+var admin = require('./routes/admin');
 
 //set port
 app.set('port', process.env.PORT || 5050);
@@ -27,6 +26,14 @@ app.use(bodyParser.json());
 //passport
 // app.use(passport.initialize());
 // app.use(passport.session());
+
+// app.use(session({
+//   secret: process.env.SESSION_SECRET,
+//   key: 'user',
+//   resave: 'true',
+//   saveUninitialized: false,
+//   cookie: { maxage: 60000, secure: false },
+// }));
 //modules n routes
 // app.use('/login', login);
 app.use('/orders', orders);

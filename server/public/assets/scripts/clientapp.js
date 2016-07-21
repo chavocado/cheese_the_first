@@ -10,7 +10,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: '/views/gcheese.html',
       controller: 'OrderController'
     })
-    .when('/orders', {
+    .when('/admin', {
       templateUrl: '/views/admin.html',
       controller: 'AdminController'
     })
