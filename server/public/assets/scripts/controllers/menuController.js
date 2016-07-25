@@ -1,4 +1,4 @@
-myApp.controller('AdminJobController', ['$scope', '$http', 'AdminDataFactory', '$location', '$window', 'UserFactory', function($scope, $http, AdminDataFactory, $location, $window, UserFactory){
+myApp.controller('MenuController', ['$scope', '$http', 'AdminDataFactory', '$location', '$window', 'UserFactory', function($scope, $http, AdminDataFactory, $location, $window, UserFactory){
   //injections
   $scope.dataFactory = AdminDataFactory;
   userFactory = UserFactory;
