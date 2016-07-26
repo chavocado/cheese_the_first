@@ -3,12 +3,12 @@
 // var passport = require('../auth/passport');
 // var path = require('path');
 // var auth = require('../utils/auth');
-
+//
 // router.get('/login',
 //   passport.authenticate('google', { scope:
 //     [ 'openid', 'email'] }
 // ));
-//
+// 
 // router.get( '/callback',
 //     passport.authenticate( 'google', {
 //         successRedirect: '/#/user',
@@ -30,5 +30,5 @@
 //   req.logout();
 //   res.sendStatus(200); // they made it!
 // });
-
+//
 // module.exports = router;
