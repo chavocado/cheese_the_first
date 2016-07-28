@@ -4,9 +4,9 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
 //passport
-// var session = require('express-session');
-// var passport = require('./auth/passport');
-// var isLoggedIn = require('./utils/auth');
+var session = require('express-session');
+var passport = require('./auth/passport');
+var isLoggedIn = require('./utils/auth');
 //route variables
 var connection = require('./modules/connection');
 console.log(connection);
@@ -25,18 +25,19 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //passport
-// app.use(passport.initialize());
-// app.use(passport.session());
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  key: 'user',
+  resave: 'true',
+  saveUninitialized: false,
+  cookie: { maxage: 60000, secure: false },
+}));
 
-// app.use(session({
-//   secret: process.env.SESSION_SECRET,
-//   key: 'user',
-//   resave: 'true',
-//   saveUninitialized: false,
-//   cookie: { maxage: 60000, secure: false },
-// }));
+app.use(passport.initialize());
+app.use(passport.session());
+
 //modules n routes
-// app.use('/login', login);
+app.use('/login', login);
 app.use('/orders', orders);
 app.use('/index', index);
 app.use('/menu', menu);
