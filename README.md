@@ -11,7 +11,7 @@ Cheese the First is a full-stack web application that the Organization She’s t
 Application Features
 
 Order Form:
-This view will have an intuitive order form a person can use to order from a variety (4) of different grilled cheeses. The form will have required fields for name and address. Upon hitting the submit button the information will populate a database with the time of the order, a person's information (name, address), amount of grilled cheeses and a monetary total (no payment).
+This view will have an intuitive order form a person can use to order from a variety (4) of different grilled cheeses. The form will have required fields for name and address. Upon hitting the submit button the information will populate a database with the time of the order, a person's information (name, email, address), amount of grilled cheeses and a monetary total (no payment yet).
 
 Admin Features:
 Separate hidden view that only the admin will know of. It will have access to order information from the database. The admin view will have a table of data that will include an Order #, Time order was place, order status, person's who ordered information (name, address), an update button and a delete button. The update button will change the status between completed and in progress in the database and the view. The delete button will delete the order in it’s entirety from the database. Orders will be able to be sorted by time order was placed and status.
