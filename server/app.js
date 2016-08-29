@@ -16,6 +16,7 @@ var index = require('./routes/index');
 var orders = require('./routes/orders');
 var admin = require('./routes/admin');
 var menu = require('./routes/menu');
+var cheese = require('./routes/cheese');
 
 //set port
 app.set('port', process.env.PORT || 5050);
@@ -40,9 +41,9 @@ app.use(passport.session());
 //modules n routes
 app.use('/login', login);
 app.use('/orders', orders);
-app.use('/index', index);
 app.use('/menu', menu);
 app.use('/admin', admin);
+app.use('/cheese', cheese);
 //catch all
 app.use('/', index);
 
