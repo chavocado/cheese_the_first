@@ -11,7 +11,8 @@ router.post('/', function (req, res) {
     if (err) {
       res.sendStatus(500);
     }
-
+    console.log('connectionString:', connectionString);
+    console.log('client:', client);
     client.query( 'INSERT INTO customers (full_name, email, address, city) ' +
                   'VALUES ($1, $2, $3, $4) returning id;',
                    [order.full_name, order.email, order.address, order.city],

@@ -1,3 +1,79 @@
+* {
+  border: 1px solid black;
+}
+
+/***** admin page *****/
+.orders-table {
+  width: 100%;
+}
+
+/***** order page *****/
+#gcheeseForm {
+  margin: 5px;
+  border: 1px solid red;
+}
+
+.grilled-cheese-list {
+  width: auto;
+  display: inline-block;
+  background: #13BDC6;
+	background: rgba(255,255,255,.3);
+	border-color: #B8EBEE;
+	border-color: rgba(255,255,255,.6);
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	line-height: 30px;
+	list-style: none;
+	padding: 5px 10px;
+	margin-bottom: 2px;
+}
+
+.grilled-cheese-list h3 {
+  margin: 5px;
+  display: block;
+}
+
+.gcsandwichX {
+  width: 45%;
+}
+
+.description-price, .dropdown {
+  width: auto;
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
+}
+
+.grilled-cheese-list .price, .grilled-cheese-list .dropdown {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+/***** checkout *****/
+
+.checkout {
+  overflow: auto;
+}
+
+.customer-details {
+  margin: 5px;
+  width: 400px;
+  float: left;
+}
+
+.payment {
+  margin: 5px;
+  width: 400px;
+  float: left;
+
+}
+
 body{
   font-family: 'Lato', verdana, arial, sans-serif;
   font-size: 16px;
@@ -24,7 +100,7 @@ body{
   width: 400px;
   margin: auto;
 }
-form, fieldset, legend, ol, li {
+form, ol, li {
   margin: 0;
   padding: 0;
 }
@@ -35,15 +111,15 @@ form, fieldset, legend, ol, li {
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	padding: 10px 20px 20px 20px;
-	width: 400px;
+	/*width: 400px;*/
 }
-#gcheeseForm fieldset {
+/*#gcheeseForm fieldset {
 	border: none;
 	margin-bottom: 10px;
 }
 #gcheeseForm fieldset:last-of-type {
 	margin-bottom: 0;
-}
+}*/
 #gcheeseForm legend {
 	color: #A5438B;
 	font-size: 16px;
@@ -56,12 +132,12 @@ form, fieldset, legend, ol, li {
 	content: "Step " counter(fieldsets) ": ";
 	counter-increment: fieldsets;
 }*/
-#gcheeseForm fieldset fieldset legend {
+/*#gcheeseForm fieldset fieldset legend {
 	color: #A5438B;
 	font-size: 13px;
 	font-weight: normal;
 	padding-bottom: 0;
-}
+}*/
 #gcheeseForm ol li {
 	background: #13BDC6;
 	background: rgba(255,255,255,.3);
@@ -82,7 +158,7 @@ form, fieldset, legend, ol, li {
 	border: none;
 	float: left;
 }
-#gcheeseForm fieldset fieldset label {
+#gcheeseForm {
 	background:none no-repeat left 50%;
 	line-height: 20px;
 	padding: 0px;
@@ -130,8 +206,16 @@ form, fieldset, legend, ol, li {
 	cursor: pointer;
 }
 /*drop down*/
-.container {
+/*.container {
   text-align: center;
+}*/
+
+.container ul {
+  padding: 0px;
+}
+
+ol .container {
+
 }
 
 .container > .dropdown {
