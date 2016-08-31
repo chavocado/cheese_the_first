@@ -13,7 +13,7 @@ var connection = require('./modules/connection');
 console.log(connection);
 var login = require('./routes/login');
 var index = require('./routes/index');
-var home = require('./routes/home');
+var scholars = require('./routes/scholars');
 var orders = require('./routes/orders');
 var admin = require('./routes/admin');
 var menu = require('./routes/menu');
@@ -41,7 +41,7 @@ app.use(passport.session());
 
 //modules n routes
 app.use('/login', login);
-app.use('/home', home);
+app.use('/scholars', scholars);
 app.use('/orders', orders);
 app.use('/menu', menu);
 app.use('/admin', admin);
