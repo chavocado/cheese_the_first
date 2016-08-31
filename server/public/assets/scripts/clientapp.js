@@ -14,6 +14,14 @@ myApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: '/views/admin.html',
       controller: 'AdminController'
     })
+    .when('/admin/orders', {
+      templateUrl: '/views/admin-orders.html',
+      controller: 'AdminOrderController'
+    })
+    .when('/admin/scholars', {
+      templateUrl: '/views/admin-scholars.html',
+      controller: 'AdminScholarController'
+    })
     .when('/thank-you', {
       templateUrl: '/views/thankyou.html',
       controller: 'OrderController'

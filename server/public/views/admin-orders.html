@@ -1,0 +1,41 @@
+<div ng-include="'/views/templates/admin-nav.html'"></div>
+
+<div class="orders">
+  <table st-table="orderSnap" st-safe-src="orders">
+    <thead>
+      <tr>
+        <th st-sort="id">ID</th>
+        <th st-sort="moment_date" >Order Time</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th st-sort="gc1">GC1</th>
+        <th st-sort="gc2">GC2</th>
+        <th st-sort="gc3">GC3</th>
+        <th st-sort="gc4">GC4</th>
+        <th st-sort="total">Order Total</th>
+        <th st-sort="payment_type">Payment Type</th>
+        <th st-sort="status">Order Status</th>
+        <th>UPDATE</th>
+        <th>DELETE</th>
+      </tr>
+    </thead>
+    <tr st-select-row="order" st-select-mode="multiple" ng-repeat="order in orderSnap">
+      <td>{{order.id}}</td>
+      <td>{{order.moment_date}}</td>
+      <td>{{order.full_name}}</td>
+      <td>{{order.address}} {{order.city}}</td>
+      <td>{{order.gc1}}</td>
+      <td>{{order.gc2}}</td>
+      <td>{{order.gc3}}</td>
+      <td>{{order.gc4}}</td>
+      <td>{{order.total | currency}}</td>
+      <td>{{order.payment_type | uppercase}}</td>
+      <td >{{order.status}}</td>
+      <td><button ng-click="updateStatus(order)">Update</button></td>
+      <td><button ng-click="deleteOrder(order.id)">Delete</button></td>
+    </tr>
+  </table>
+</div>
+
+
+<div ng-include="'/views/templates/footer.html'"></div>
