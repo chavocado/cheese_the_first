@@ -1,6 +1,46 @@
 <div ng-include="'/views/templates/admin-nav.html'"></div>
 
+<link rel="stylesheet" href="/assets/styles/editMenu.css" />
+
+<div class="gcheese">
+  <div class="gcheeseContainer">
+    <form id="gcheeseForm">
+      <fieldset>
+        <legend>Edit Menu</legend>
+          <ol>
+            <li class="container" ng-repeat="sandwich in sandwiches">
+              <label for="name">{{sandwich.name}}</label>
+              <p>Pencil icon on a styled link button:
+                <a href="#" class="btn btn-info btn-lg">
+                  <span class="glyphicon glyphicon-pencil"></span> Pencil
+                </a>
+              </p>
+
+
+              <ul>
+                <li>{{sandwich.description}}</li>
+                <li>Price ${{sandwich.unit_price}}</li>
+              </ul>
+            </li>
+
+          <!-- <li class="container">
+            <label for="grilled_cheese1">{{grilledCheeses.gc1.name}}</label>
+              <ul>
+                <li>{{grilledCheeses.gc1.description}}</li>
+                <li>Price ${{grilledCheeses.gc1.price}}</li>
+              </ul>
+            <div class="dropdown">
+              <select class="dropdown-select" id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.gc1" ng-change="addGC()">
+                <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
+              </select>
+            </div>
+          </li> -->
 
 
 
+        </ol>
+      </fieldset>
+    </form>
+  </div>
+</div>
 <div ng-include="'/views/templates/footer.html'"></div>

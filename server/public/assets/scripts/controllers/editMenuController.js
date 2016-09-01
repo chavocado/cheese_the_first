@@ -1,8 +1,8 @@
 myApp.controller('EditMenuController', ['$scope', '$http',  '$location', '$window', 'CrudResourceFactory', function($scope, $http, $location, $window, CrudResourceFactory){
   console.log('edit Menu controller running');
 
-  var sandwiches = CrudResourceFactory.query(function(){
-    console.log(sandwiches);
+  $scope.sandwiches = CrudResourceFactory.query(function(){
+    console.log('sandwiches in db: ', $scope.sandwiches);
   })
 
 
