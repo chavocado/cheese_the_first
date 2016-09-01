@@ -22,6 +22,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: '/views/menu.html',
       controller: 'MenuController'
     })
+    .when('/edit-menu', {
+      templateUrl: '/views/editMenu.html',
+      controller: 'EditMenuController'
+    })
     .when('/login', {
       templateUrl: '/views/login.html',
       controller: 'LoginController'
