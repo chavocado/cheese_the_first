@@ -1,0 +1,79 @@
+<div ng-include="'/views/templates/admin-nav.html'"></div>
+
+<link rel="stylesheet" href="/assets/styles/editMenu.css" />
+
+<div class="gcheese">
+  <div class="gcheeseContainer">
+    <form id="gcheeseForm">
+      <fieldset>
+        <legend>Edit Menu</legend>
+        <ol>
+          <li class="container" ng-repeat="sandwich in sandwiches">
+            <label for="name">{{sandwich.name}}</label>
+
+            <ul>
+              <li>{{sandwich.description}}</li>
+              <li>Price ${{sandwich.unit_price}}</li>
+              <li>Active: {{sandwich.active}}</li>
+            </ul>
+          </li>
+
+
+
+        </ol>
+      </fieldset>
+      <fieldset>
+        <button ng-click="toggleModal()">Add Sandwich</button>
+      </fieldset>
+    </form>
+
+
+
+  </div>
+</div>
+
+<span>
+  <a class="btn btn-info btn-lg">
+    <span class="glyphicon glyphicon-exclamation-sign"></span>
+  </a>
+</span>
+
+<div ng-include="'/views/templates/footer.html'"></div>
+
+
+<modal-dialog show="myData.modalShown" width="60%" height="60%">
+  <div class="addSandwich">
+
+    <div class="sandwich-modal-form-container">
+      <h2 class="modalHeader">Add Sandwich</h3>
+      <form class="addSandwichForm">
+
+        <div class="row">
+          <label for="newSandwich.name">Name of New Sandwich: </label>
+          <input type="text" name="newSandwich.name" ng-model="newSandwich.name">
+        </div>
+
+        <div class="row">
+          <label for="newSandwich.description">New Sandwich Description: </label>
+          <input type="textarea" name="newSandwich.description" ng-model="newSandwich.description">
+        </div>
+
+        <div class="row">
+          <label for="newSandwich.unitPrice">New Sandwich cost in Dollars: </label>
+          <input type="number" name="newSandwich.unitPrice" ng-model="newSandwich.unitPrice">
+        </div>
+
+        <div class="row">
+          <label for="newSandwich.active">Is the New Sandwich Active Now: </label>
+          <input type="radio" name="gender" value="True" ng-model="newSandwich.active" required/> <label for="Active">Active</label>
+          <input type="radio" name="gender" value="False" ng-model="newSandwich.active" required/> <label for="Inactive">Inactive</label>
+        </div>
+
+
+
+
+        <button ng-click="submitSandwich()">Submit</button>
+      </form>
+    </div>
+  </div>
+</modal-dialog>

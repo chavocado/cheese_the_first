@@ -1,0 +1,109 @@
+#editMenuForm {
+  /*background: #13BDC6;*/
+	background: #2dced5;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	padding: 10px 20px 20px 20px;
+	width: 400px;
+}
+#editMenuForm fieldset {
+	border: none;
+	margin-bottom: 10px;
+}
+#editMenuForm fieldset:last-of-type {
+	margin-bottom: 0;
+}
+#editMenuForm legend {
+	color: #A5438B;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 10px;
+	text-shadow: 0 1px 1px #F6BFE6;
+}
+/*try out step counter*/
+/*#editMenuForm > fieldset > legend:before {
+	content: "Step " counter(fieldsets) ": ";
+	counter-increment: fieldsets;
+}*/
+#editMenuForm fieldset fieldset legend {
+	color: #A5438B;
+	font-size: 13px;
+	font-weight: normal;
+	padding-bottom: 0;
+}
+#editMenuForm ol li {
+	background: #13BDC6;
+	background: rgba(255,255,255,.3);
+	border-color: #B8EBEE;
+	border-color: rgba(255,255,255,.6);
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	line-height: 30px;
+	list-style: none;
+	padding: 5px 10px;
+	margin-bottom: 2px;
+}
+#editMenuForm ol ol li {
+	background: none;
+	border: none;
+	float: left;
+}
+#editMenuForm fieldset fieldset label {
+	background:none no-repeat left 50%;
+	line-height: 20px;
+	padding: 0px;
+	width: auto;
+}
+#editMenuForm input:not([type=radio]) {
+	background: #ffffff;
+	border: none;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+	font: italic 13px 'Lato', verdana, arial, sans-serif;
+	outline: none;
+	padding: 5px;
+	width: 200px;
+}
+#editMenuForm input:not([type=submit]):focus,
+#editMenuForm textarea:focus {
+	background: #eaeaea;
+}
+#editMenuForm input[type=radio] {
+	float: left;
+	margin-right: 5px;
+  margin-top: 10px;
+}
+#editMenuForm button {
+	background: #CF2993;
+	border: none;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px;
+	color: #ffffff;
+	display: block;
+	font: 18px 'Lato', verdana, arial, sans-serif;
+	letter-spacing: 1px;
+	margin: auto;
+	padding: 7px 25px;
+	text-shadow: 0 1px 1px #000000;
+	text-transform: uppercase;
+}
+#editMenuForm button:hover {
+	background: #A5228B;
+	cursor: pointer;
+}
+
+.ng-modal * {
+  color: black;
+}
+.modalHeader{
+  text-align: center;
+  margin-bottom: 5%;
+}

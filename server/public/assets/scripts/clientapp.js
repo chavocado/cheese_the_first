@@ -1,10 +1,10 @@
-var myApp = angular.module('myApp', ['ngRoute','smart-table']);
+var myApp = angular.module('myApp', ['ngRoute','smart-table','ngResource', 'ngModal']);
 // ng routing
 myApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/home', {
       templateUrl: '/views/home.html',
-      controller: 'OrderController'
+      controller: 'HomeController'
     })
     .when('/grilled-cheese', {
       templateUrl: '/views/gcheese.html',
@@ -14,6 +14,14 @@ myApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: '/views/admin.html',
       controller: 'AdminController'
     })
+    .when('/admin/orders', {
+      templateUrl: '/views/admin-orders.html',
+      controller: 'AdminOrderController'
+    })
+    .when('/admin/scholars', {
+      templateUrl: '/views/admin-scholars.html',
+      controller: 'AdminScholarController'
+    })
     .when('/thank-you', {
       templateUrl: '/views/thankyou.html',
       controller: 'OrderController'
@@ -21,6 +29,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
     .when('/menu', {
       templateUrl: '/views/menu.html',
       controller: 'MenuController'
+    })
+    .when('/edit-menu', {
+      templateUrl: '/views/editMenu.html',
+      controller: 'EditMenuController'
     })
     .when('/login', {
       templateUrl: '/views/login.html',

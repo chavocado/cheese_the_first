@@ -1,4 +1,6 @@
 myApp.controller('MenuController', ['$scope', '$http', 'AdminDataFactory', '$location', '$window', 'UserFactory', function($scope, $http, AdminDataFactory, $location, $window, UserFactory){
+  console.log('menu controller running');
+
   //injections
   $scope.dataFactory = AdminDataFactory;
   userFactory = UserFactory;
