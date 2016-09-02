@@ -11,14 +11,7 @@ myApp.controller('EditMenuController', ['$scope', '$http',  '$location', '$windo
       console.log('sandwiches in db: ', $scope.sandwiches);
     })
   }
-  $scope.submitSandwich = function(){
-    CrudResourceFactory.save($scope.newSandwich, function(){
 
-      getSandwiches();
-
-    })
-
-  }
 
   // getMenu();
   // function getMenu() {
@@ -46,9 +39,13 @@ myApp.controller('EditMenuController', ['$scope', '$http',  '$location', '$windo
     }
 
     $scope.submitSandwich = function(){
+      console.log($scope.newSandwich);
+      CrudResourceFactory.save($scope.newSandwich, function(){
 
+        getSandwiches();
+
+      })
     }
-
 
 
 }]);

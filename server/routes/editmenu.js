@@ -21,16 +21,30 @@ router.get('/', function(req, res) {
    });
  });
 
- router.post('/', function(req, res){
 
-   var sandwich = req.params;
-   console.log(sandwich);
-   pg.connect(connectionString, function(err, client, done){
-     if (err) {
-       res.sendStatus(500);
-       return
-     }
+  router.post('/', function(req, res){
 
+    var sandwich = req.body;
+    console.log(sandwich);
+
+  pg.connect(connectionString, function(err, client, done){
+    if (err) {
+      res.sendStatus(500);
+      return
+    }
+    client.query('INSERT INTO sandwiches (name, description, unit_price, active) VALUES ($1, $2, $3, $4)',  [sandwich.name, sandwich.description, sandwich.unitPrice, sandwich.active],
+      function(err, result){
+      done();
+      if (err) {
+        console.log(err);
+        res.sendStatus(500);
+        return;
+      }
+
+      res.sendStatus(200);
+    })
+   })
+  })
    //
   //  router.post('/', function(req, res) {
    //
@@ -60,8 +74,7 @@ router.get('/', function(req, res) {
   //  })
 
 
-  })
-})
+
 
 
 
