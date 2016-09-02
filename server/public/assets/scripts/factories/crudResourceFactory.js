@@ -4,6 +4,6 @@ myApp.factory('CrudResourceFactory', ['$http', '$resource', function($http, $res
 
 
 
-  return $resource('/editMenu/');
+  return $resource('/editMenu/:id');
 
 }]);

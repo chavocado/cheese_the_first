@@ -1,16 +1,24 @@
 myApp.controller('EditMenuController', ['$scope', '$http',  '$location', '$window', 'CrudResourceFactory', function($scope, $http, $location, $window, CrudResourceFactory){
-
+  getSandwiches();
   $scope.newSandwich = {};
 
 
 
 
   console.log('edit Menu controller running');
+  function getSandwiches(){
+    $scope.sandwiches = CrudResourceFactory.query(function(){
+      console.log('sandwiches in db: ', $scope.sandwiches);
+    })
+  }
+  $scope.submitSandwich = function(){
+    CrudResourceFactory.save($scope.newSandwich, function(){
 
-  $scope.sandwiches = CrudResourceFactory.query(function(){
-    console.log('sandwiches in db: ', $scope.sandwiches);
-  })
+      getSandwiches();
 
+    })
+
+  }
 
   // getMenu();
   // function getMenu() {
@@ -24,6 +32,10 @@ myApp.controller('EditMenuController', ['$scope', '$http',  '$location', '$windo
 
 
 
+
+
+
+
     $scope.myData = {
       modalShown: false
     }
@@ -33,6 +45,9 @@ myApp.controller('EditMenuController', ['$scope', '$http',  '$location', '$windo
       console.log("this ran");
     }
 
+    $scope.submitSandwich = function(){
+
+    }
 
 
 

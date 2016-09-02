@@ -10,21 +10,10 @@
         <ol>
           <li class="container" ng-repeat="sandwich in sandwiches">
             <label for="name">{{sandwich.name}}</label>
-            <!-- <p>Pencil icon on a styled link button:
-              <a href="#" class="btn btn-info btn-lg">
-                <span class="glyphicon glyphicon-pencil"></span> Pencil
-              </a>
-            </p> -->
-
 
             <ul>
-              <!-- <li>
-                <label for="description">description:</label>
-                <input type="text" name="email" ng-model="company.email" required>
-              </li> -->
               <li>{{sandwich.description}}</li>
               <li>Price ${{sandwich.unit_price}}</li>
-              <li>{{sandwich.code}}</li>
               <li>Active: {{sandwich.active}}</li>
             </ul>
           </li>
@@ -43,6 +32,12 @@
   </div>
 </div>
 
+<span>
+  <a class="btn btn-info btn-lg">
+    <span class="glyphicon glyphicon-exclamation-sign"></span>
+  </a>
+</span>
+
 <div ng-include="'/views/templates/footer.html'"></div>
 
 
@@ -50,11 +45,34 @@
   <div class="addSandwich">
 
     <div class="sandwich-modal-form-container">
+      <h2 class="modalHeader">Add Sandwich</h3>
       <form class="addSandwichForm">
-        <label for="newSandwich">Name of New Sandwich: </label>
-        <input type="text" name="newSandwich" ng-model="newSandwich.name">
 
-        <button ng-click="submitSandwich">Submit</button>
+        <div class="row">
+          <label for="newSandwich.name">Name of New Sandwich: </label>
+          <input type="text" name="newSandwich.name" ng-model="newSandwich.name">
+        </div>
+
+        <div class="row">
+          <label for="newSandwich.description">New Sandwich Description: </label>
+          <input type="textarea" name="newSandwich.description" ng-model="newSandwich.description">
+        </div>
+
+        <div class="row">
+          <label for="newSandwich.unitPrice">New Sandwich cost in Dollars: </label>
+          <input type="number" name="newSandwich.unitPrice" ng-model="newSandwich.unitPrice">
+        </div>
+
+        <div class="row">
+          <label for="newSandwich.active">Is the New Sandwich Active Now: </label>
+          <input type="radio" name="gender" value="True" ng-model="newSandwich.active" required/> <label for="Active">Active</label>
+          <input type="radio" name="gender" value="False" ng-model="newSandwich.active" required/> <label for="Inactive">Inactive</label>
+        </div>
+
+
+
+
+        <button ng-click="submitSandwich()">Submit</button>
       </form>
     </div>
   </div>

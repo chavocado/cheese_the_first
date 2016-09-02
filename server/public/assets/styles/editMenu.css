@@ -99,3 +99,11 @@
 	background: #A5228B;
 	cursor: pointer;
 }
+
+.ng-modal * {
+  color: black;
+}
+.modalHeader{
+  text-align: center;
+  margin-bottom: 5%;
+}
