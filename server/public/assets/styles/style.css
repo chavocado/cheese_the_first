@@ -1,6 +1,6 @@
-* {
+/** {
   border: 1px solid black;
-}
+}*/
 
 /***** admin page *****/
 .orders-table {
@@ -9,12 +9,65 @@
 
 /***** order page *****/
 #gcheeseForm {
+  background-color: white;
+  overflow: auto;
   margin: 5px;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
+  display: block;
 }
 
-.grilled-cheese-list {
-  width: auto;
+.order-title {
+  text-align: center;
+  color: red;
+  margin: 5px;
+}
+
+.gcheese-name {
+  text-align: center;
+  color: red;
+}
+
+.dropdown {
+  text-align: center;
+}
+
+.gcheese-sandwich {
+  vertical-align: top;
+  width: 49%;
+  display: inline-block;
+  text-align: center;
+  margin: 3px;
+  background: #13BDC6;
+	background: rgba(255,255,255,.3);
+	border-color: #B8EBEE;
+	border-color: rgba(255,255,255,.6);
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.description-price {
+  height: 80px;
+  width: 80%;
+  color: red;
+  margin: 0 auto;
+}
+
+.gcheese-list {
+  position: relative;
+  width: 100%;
+  text-align: justify;
+  display: inline-block;
+}
+
+.gcheese-list:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+/*.gcheese-list {
   display: inline-block;
   background: #13BDC6;
 	background: rgba(255,255,255,.3);
@@ -29,49 +82,41 @@
 	list-style: none;
 	padding: 5px 10px;
 	margin-bottom: 2px;
-}
+}*/
 
-.grilled-cheese-list h3 {
-  margin: 5px;
-  display: block;
-}
 
-.gcsandwichX {
-  width: 45%;
-}
-
-.description-price, .dropdown {
-  width: auto;
-  display: inline-block;
-  vertical-align: top;
-  margin: 5px;
-}
-
-.grilled-cheese-list .price, .grilled-cheese-list .dropdown {
-  text-align: center;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-}
 /***** checkout *****/
 
-.checkout {
-  overflow: auto;
+ul {
+  list-style-type: none;
+}
+
+.gcheese-checkout {
+  border: 1px solid blue;
+  width: 100%;
+  position: relative;
+  display: inline-block;
 }
 
 .customer-details {
   margin: 5px;
   width: 400px;
-  float: left;
+  display: inline-block;
 }
 
 .payment {
-  margin: 5px;
+  vertical-align: top;
   width: 400px;
-  float: left;
+  display: inline-block;
+}
 
+.payment-type li {
+  margin: 5px;
+}
+
+.submit-button {
+  display: inline-block;
+  margin-left: 20px;
 }
 
 body{
@@ -100,10 +145,7 @@ body{
   width: 400px;
   margin: auto;
 }
-form, ol, li {
-  margin: 0;
-  padding: 0;
-}
+
 #gcheeseForm {
   /*background: #13BDC6;*/
 	background: #2dced5;
@@ -120,13 +162,13 @@ form, ol, li {
 #gcheeseForm fieldset:last-of-type {
 	margin-bottom: 0;
 }*/
-#gcheeseForm legend {
+/*#gcheeseForm legend {
 	color: #A5438B;
 	font-size: 16px;
 	font-weight: bold;
 	padding-bottom: 10px;
 	text-shadow: 0 1px 1px #F6BFE6;
-}
+}*/
 /*try out step counter*/
 /*#gcheeseForm > fieldset > legend:before {
 	content: "Step " counter(fieldsets) ": ";
@@ -138,7 +180,7 @@ form, ol, li {
 	font-weight: normal;
 	padding-bottom: 0;
 }*/
-#gcheeseForm ol li {
+/*#gcheeseForm ol li {
 	background: #13BDC6;
 	background: rgba(255,255,255,.3);
 	border-color: #B8EBEE;
@@ -157,13 +199,13 @@ form, ol, li {
 	background: none;
 	border: none;
 	float: left;
-}
-#gcheeseForm {
+}*/
+/*#gcheeseForm {
 	background:none no-repeat left 50%;
 	line-height: 20px;
 	padding: 0px;
 	width: auto;
-}
+}*/
 #gcheeseForm input:not([type=radio]) {
 	background: #ffffff;
 	border: none;
@@ -209,14 +251,6 @@ form, ol, li {
 /*.container {
   text-align: center;
 }*/
-
-.container ul {
-  padding: 0px;
-}
-
-ol .container {
-
-}
 
 .container > .dropdown {
   margin: 0 20px;
@@ -301,14 +335,15 @@ ol .container {
 }
 
 /* Text styles */
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
 		padding: 0 0 0em 0;
 		margin: 0;
 		color: #404041;
 		line-height: 1.25em;
 		font-weight:700;
 		font-family: 'Lato', sans-serif;
-}
+}*/
+
 /* Heading */
 .header {
   background-color: #fff;
