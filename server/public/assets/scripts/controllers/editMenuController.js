@@ -1,4 +1,10 @@
 myApp.controller('EditMenuController', ['$scope', '$http',  '$location', '$window', 'CrudResourceFactory', function($scope, $http, $location, $window, CrudResourceFactory){
+
+  $scope.newSandwich = {};
+
+
+
+
   console.log('edit Menu controller running');
 
   $scope.sandwiches = CrudResourceFactory.query(function(){
@@ -17,6 +23,15 @@ myApp.controller('EditMenuController', ['$scope', '$http',  '$location', '$windo
   //   }
 
 
+
+    $scope.myData = {
+      modalShown: false
+    }
+
+    $scope.toggleModal = function(){
+      $scope.myData.modalShown = !$scope.myData.modalShown;
+      console.log("this ran");
+    }
 
 
 
