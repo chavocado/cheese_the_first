@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute','smart-table']);
+var myApp = angular.module('myApp', ['ngRoute','smart-table','ngResource', 'ngModal']);
 // ng routing
 myApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider
@@ -29,6 +29,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
     .when('/menu', {
       templateUrl: '/views/menu.html',
       controller: 'MenuController'
+    })
+    .when('/edit-menu', {
+      templateUrl: '/views/editMenu.html',
+      controller: 'EditMenuController'
     })
     .when('/login', {
       templateUrl: '/views/login.html',

@@ -18,7 +18,7 @@ var orders = require('./routes/orders');
 var admin = require('./routes/admin');
 var menu = require('./routes/menu');
 var cheese = require('./routes/cheese');
-
+var editMenu = require('./routes/editmenu');
 //set port
 app.set('port', process.env.PORT || 5050);
 
@@ -46,6 +46,7 @@ app.use('/orders', orders);
 app.use('/menu', menu);
 app.use('/admin', admin);
 app.use('/cheese', cheese);
+app.use('/editMenu', editMenu);
 //catch all
 app.use('/', index);
 
