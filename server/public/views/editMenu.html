@@ -10,11 +10,19 @@
         <ol>
           <li class="container" ng-repeat="sandwich in sandwiches">
             <label for="name">{{sandwich.name}}</label>
-
+            <!-- if/when we add in bootstrap just delete the text 'edit' from the span and a pretty icon will appear  -->
+            <span ng-click="toggleEditModal(sandwich)" class="glyphicon glyphicon-pencil" aria-hidden="true">edit</span>
             <ul>
               <li>{{sandwich.description}}</li>
               <li>Price ${{sandwich.unit_price}}</li>
               <li>Active: {{sandwich.active}}</li>
+
+              <!-- <li>
+                <button ng-click="deleteSandwich(sandwich)">
+                  Delete Sandwich
+                </button>
+              </li> -->
+
             </ul>
           </li>
 
@@ -40,7 +48,6 @@
 
 <div ng-include="'/views/templates/footer.html'"></div>
 
-
 <modal-dialog show="myData.modalShown" width="60%" height="60%">
   <div class="addSandwich">
 
@@ -48,31 +55,70 @@
       <h2 class="modalHeader">Add Sandwich</h3>
       <form class="addSandwichForm">
 
-        <div class="row">
+        <div class="row modal-row">
           <label for="newSandwich.name">Name of New Sandwich: </label>
           <input type="text" name="newSandwich.name" ng-model="newSandwich.name">
         </div>
 
-        <div class="row">
+        <div class="row modal-row">
           <label for="newSandwich.description">New Sandwich Description: </label>
           <input type="textarea" name="newSandwich.description" ng-model="newSandwich.description">
         </div>
 
-        <div class="row">
+        <div class="row modal-row">
           <label for="newSandwich.unitPrice">New Sandwich cost in Dollars: </label>
           <input type="number" name="newSandwich.unitPrice" ng-model="newSandwich.unitPrice">
         </div>
 
-        <div class="row">
+        <div class="row modal-row">
           <label for="newSandwich.active">Is the New Sandwich Active Now: </label>
-          <input type="radio" name="gender" value="True" ng-model="newSandwich.active" required/> <label for="Active">Active</label>
-          <input type="radio" name="gender" value="False" ng-model="newSandwich.active" required/> <label for="Inactive">Inactive</label>
+          <input type="radio" name="active" value="True" ng-model="newSandwich.active" required/> <label for="Active">Active</label>
+          <input type="radio" name="active" value="False" ng-model="newSandwich.active" required/> <label for="Inactive">Inactive</label>
         </div>
 
 
 
+        <div class="row modal-row">
+          <button ng-click="submitSandwich()">Submit</button>
+        </div>
 
-        <button ng-click="submitSandwich()">Submit</button>
+      </form>
+    </div>
+  </div>
+</modal-dialog>
+
+
+<modal-dialog show="editSandwich.modalShown" width="60%" height="60%">
+  <div class="addSandwich">
+
+    <div class="sandwich-modal-form-container">
+      <h2 class="modalHeader">Edit Sandwich</h3>
+      <form class="addSandwichForm">
+
+        <div class="row modal-row">
+          <label for="selectedSandwichToEdit.name">Name of Sandwich: </label>
+          <input type="text" name="selectedSandwichToEdit.name" ng-model="selectedSandwichToEdit.name">
+        </div>
+
+        <div class="row modal-row">
+          <label for="selectedSandwichToEdit.description">Sandwich Description: </label>
+          <input type="textarea" name="selectedSandwichToEdit.description" ng-model="selectedSandwichToEdit.description">
+        </div>
+
+        <div class="row modal-row">
+          <label for="selectedSandwichToEdit.unit_price">Sandwich cost in Dollars: </label>
+          <input type="number" name="selectedSandwichToEdit.unit_price"  ng-model="selectedSandwichToEdit.unit_price">
+        </div>
+
+        <div class="row modal-row">
+          <label for="selectedSandwichToEdit.active">Is the Sandwich Active: </label>
+          <input type="radio" name="active" value="True" ng-model="selectedSandwichToEdit.active" required/> <label for="Active">Active</label>
+          <input type="radio" name="active" value="False" ng-model="selectedSandwichToEdit.active" required/> <label for="Inactive">Inactive</label>
+        </div>
+
+        <div class="row modal-row">
+          <button ng-click="submitSandwichChanges()">Submit</button>
+        </div>
       </form>
     </div>
   </div>
