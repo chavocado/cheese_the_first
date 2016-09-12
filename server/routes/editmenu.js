@@ -12,25 +12,19 @@ router.get('/', function(req, res) {
 		}
 		client.query('SELECT * FROM sandwiches', function(err, result) {
 			done();
-
-
-
 			res.send(result.rows);
-
 		});
 	});
 });
 
 
 router.post('/', function(req, res) {
-
 	var sandwich = req.body;
 	console.log(sandwich);
-
 	pg.connect(connectionString, function(err, client, done) {
 		if (err) {
 			res.sendStatus(500);
-			return
+			return;
 		}
 		client.query('INSERT INTO sandwiches (name, description, unit_price, active) VALUES ($1, $2, $3, $4)', [sandwich.name, sandwich.description, sandwich.unitPrice, sandwich.active],
 			function(err, result) {
@@ -42,16 +36,16 @@ router.post('/', function(req, res) {
 				}
 
 				res.sendStatus(200);
-			})
-	})
-})
+			});
+	});
+});
 
 router.delete('/', function(req, res) {
   var sandwich = req.body;
   pg.connect(connectionString, function(err, client, done) {
   	if (err) {
   		res.sendStatus(500);
-  		return
+  		return;
   	}
   	// client.query('DELETE FROM sandwiches WHERE id =' + sandwich.id,
   	//   function(err, result){
@@ -65,18 +59,16 @@ router.delete('/', function(req, res) {
   // 	res.sendStatus(200);
   // })
 
-  })
-})
+});
+});
 
 router.put('/', function(req, res){
   var editedSandwich = req.body;
   console.log("put request fired: ", editedSandwich);
-
-
     pg.connect(connectionString, function(err, client, done){
     if (err) {
       res.sendStatus(500);
-      return
+      return;
     }
     client.query('UPDATE sandwiches SET name = $1, description = $2, unit_price= $3, active = $4 WHERE id =' + editedSandwich.id, [editedSandwich.name, editedSandwich.description, editedSandwich.unit_price, editedSandwich.active],
       function(err, result){
@@ -89,15 +81,8 @@ router.put('/', function(req, res){
 
       res.sendStatus(200);
 
-    })
-  })
-
-})
-
-
-
-
-
-
+    });
+  });
+});
 
 module.exports = router;

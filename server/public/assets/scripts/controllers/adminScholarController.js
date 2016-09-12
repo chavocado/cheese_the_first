@@ -1,4 +1,4 @@
-myApp.controller('AdminScholarController', ['$scope', '$http', 'DataFactory', function($scope, $http, DataFactory) {
+myApp.controller('AdminScholarController', ['$scope', '$http', '$location', '$window', 'ScholarsResourceFactory', function($scope, $http, $location, $window, ScholarsResourceFactory) {
 console.log('admin scholar controller running');
    //scope variables
   $scope.scholars = [];
@@ -13,6 +13,13 @@ console.log('admin scholar controller running');
         console.log('GET /scholars ', response.data);
       });
   }
+
+  // // alternative resource factory get
+  // function getScholars(){
+  //   $scope.scholars = EditMenuResourceFactory.query(function(){
+  //     console.log('Current scholars: ', $scope.scholars);
+  //   });
+  // }
 
   //scope function that adds a new scholar
   $scope.addScholar = function () {
@@ -32,6 +39,17 @@ console.log('admin scholar controller running');
       });
     }
   };
+
+  // //alternative resource factory post of new scholar
+  // $scope.addScholar = function(){
+  //   console.log($scope.newScholar);
+  //   ScholarsResourceFactory.save($scope.newScholar, function(){
+  //     $scope.newScholar = {};
+  //     $scope.toggleAddScholarModal();
+  //     getScholars();
+  //     return;
+  //   });
+  // };
 
   //scope function to update existing scholar
   $scope.updateScholar = function (scholar) {
