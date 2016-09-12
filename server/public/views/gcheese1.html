@@ -1,0 +1,118 @@
+
+<div ng-include="'/views/templates/nav.html'"></div>
+
+<div class="gcheese">
+    <form id="gcheeseForm">
+
+      <div class="grilled-cheese-list">
+        <h3>GRILLED CHEESE GOODNESS</h3>
+          <ol class="container">
+            <li class="sandwichx">
+              <label for="grilled_cheese1">{{grilledCheeses.gc1.name}}</label>
+              <img src="http://1.bp.blogspot.com/-jH1SxpdymPk/ToJUY2YBxDI/AAAAAAAAMtU/oiJleZ41Im4/s800/Caprese%2BGrilled%2BCheese%2BSandwich%2B500%2B2161.jpg" alt="gc1">
+                <ul>
+                  <li>{{grilledCheeses.gc1.description}}</li>
+                  <li>Price ${{grilledCheeses.gc1.price}}</li>
+                </ul>
+              <div class="dropdown">
+                <select class="dropdown-select" id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.gc1" ng-change="addGC()">
+                  <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
+                </select>
+              </div>
+            </li>
+            <li class="sandwichx">
+              <label for="grilled_cheese2">{{grilledCheeses.gc2.name}}</label>
+              <img src="http://4.bp.blogspot.com/-NfJQ83auups/TtqD2IwLfwI/AAAAAAAANOc/9NynMzHtc70/s800/Roast%2BBeef%2BGrilled%2BCheese%2BSandwich%2B500%2B7975.jpg" alt="gc2" />
+                <ul>
+                  <li>{{grilledCheeses.gc2.description}}</li>
+                  <li>Price ${{grilledCheeses.gc2.price}}</li>
+                </ul>
+              <div class="dropdown">
+                <select class="dropdown-select" id="currentGC2" name="grilled_cheese2" ng-model="currentOrder.gc2" ng-change="addGC()">
+                  <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
+                </select>
+              </div>
+            </li>
+            <li class="sandwichx">
+              <label for="grilled_cheese3">{{grilledCheeses.gc3.name}}</label>
+              <img src="http://4.bp.blogspot.com/_UIXOn06Pz70/TUNJrAiqIQI/AAAAAAAALMI/NGgDsKS_s8Y/s800/Souvlaki%2BChicken%2BSalad%2BSandwich%2Bwith%2BRoasted%2BRed%2BPeppers%2Band%2BFeta%2Bwith%2BSalad%2B500.jpg" alt="gc3" />
+                <ul>
+                  <li>{{grilledCheeses.gc3.description}}</li>
+                  <li>Price ${{grilledCheeses.gc3.price}}</li>
+                </ul>
+              <div class="dropdown">
+                <select class="dropdown-select" id="currentGC3" name="grilled_cheese3" ng-model="currentOrder.gc3" ng-change="addGC()">
+                  <option ng-repeat="qty in quantity" placeholder="Quantity" value="{{qty}}">{{qty}}</option>
+                </select>
+              </div>
+            </li>
+            <li class="sandwichx">
+              <label for="grilled_cheese4">{{grilledCheeses.gc4.name}}</label>
+              <img src="http://v.img.com.ua/b/orig/4/d3/e81c4ab0336911c9f5b3bf306b310d34.jpg" alt="gc4" />
+                <ul>
+                  <li>{{grilledCheeses.gc4.description}}</li>
+                  <li>Price ${{grilledCheeses.gc4.price}}</li>
+                </ul>
+              <div class="dropdown">
+                <select class="dropdown-select" id="currentGC4" name="grilled_cheese4" ng-model="currentOrder.gc4" ng-change="addGC()">
+                  <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
+                </select>
+              </div>
+            </li>
+          </ol>
+      </div>
+
+      <div class="checkout">
+        <div class="customer-details">
+          <h3>Your Details</h3>
+            <ol>
+                <li>
+                  <label for="name">Name</label>
+                  <input type="text" placeholder="Full Name" id="currentOrderFirst" name="full_name" ng-model="currentOrder.full_name" required>
+                </li>
+                <li>
+                  <label for="email">Email</label>
+                  <input type="text" placeholder="email@example.com" id="currentEmail" name="email" ng-model="currentOrder.email">
+                </li>
+                <li>
+                  <label for="address">Address</label>
+                  <input type="text" placeholder="Your Address" id="currentOrderAddress" name="address" ng-model="currentOrder.address" required>
+                </li>
+                <li>
+                  <label for="city">City</label>
+                  <input type="text" placeholder="Your City" id="currentOrderCity" name="city" ng-model="currentOrder.city" required>
+                </li>
+            </ol>
+        </div>
+        <div class="payment">
+          <h3>Payment</h3>
+            <ol>
+              <li>
+                <p>Total ${{currentOrder.gcTotal}}</p>
+              </li>
+              <li>
+                <div class="payment-type">
+                  <h3>Payment type</h3>
+                     <ol>
+          				    <li>
+          					    <input id="cash" name="payment" type="radio" value="Cash" checked ng-model="currentOrder.payment" required>
+          					     <label for="cash">Cash</label>
+          				    </li>
+          				    <li>
+                        <input id="card" name="payment" type="radio" value="Card" ng-model="currentOrder.payment">
+                        <label for="card">Card</label>
+                      </li>
+                     </ol>
+                </div>
+              </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="submit-button">
+        <button ng-click="submitOrder()">Submit</button>
+      </div>
+    </form>
+</div>
+
+<div ng-include="'/views/templates/footer.html'"></div>

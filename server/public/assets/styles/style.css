@@ -1,3 +1,135 @@
+/** {
+  border: 1px solid black;
+}*/
+
+/***** admin page *****/
+.orders-table {
+  width: 100%;
+}
+
+/***** order page *****/
+#gcheeseForm {
+  text-align: center;
+  background-color: white;
+  overflow: auto;
+  margin: 5px;
+  /*border: 1px solid red;*/
+  display: block;
+}
+
+.order-title {
+  background-color: #f85756;
+  text-align: center;
+  color: #3c4f64;
+  padding: 20px;
+  margin: 5px 0 20px 0;
+  border: 4px dotted #fde545;
+}
+
+.gcheese-name {
+  text-align: center;
+  color: #3c4f64;
+}
+
+.dropdown {
+  text-align: center;
+}
+
+.gcheese-sandwich {
+  vertical-align: top;
+  width: 48%;
+  display: inline-block;
+  text-align: center;
+  margin: 3px;
+  background: #f85756;
+	border: 4px dotted #fde545;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.gcheese-sandwich * {
+  max-width: 100%;
+  height: auto;
+}
+
+.gcheese-sandwich textarea {
+  max-width: 200px;
+  height: 50px;
+}
+
+.description-price {
+  height: 50px;
+  width: 80%;
+  color: #3c4f64;
+  margin: 0 auto;
+}
+
+.gcheese-list {
+  position: relative;
+  width: 100%;
+  text-align: justify;
+  display: inline-block;
+}
+
+.gcheese-list:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+
+
+/***** checkout *****/
+
+ul {
+  list-style-type: none;
+}
+
+.gcheese-checkout {
+  text-align: left;
+  background-color: #f85756;
+  border: 4px dotted #fde545;
+  max-width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.customer-details {
+  vertical-align: top;
+  margin: 5px;
+  width: 400px;
+  height: auto;
+  display: inline-block;
+}
+
+.customer-details li {
+  margin: 5px;
+}
+
+.payment {
+  vertical-align: top;
+  margin: 5px;
+  width: 400px;
+  display: inline-block;
+}
+
+.total li {
+  margin: 5px;
+}
+
+.total h4 {
+  margin: 0;
+}
+
+.payment-type li {
+  margin: 5px;
+}
+
+.submit-button {
+  display: inline-block;
+  margin: 50px 10px 10px;
+}
+
 body{
   font-family: 'Lato', verdana, arial, sans-serif;
   font-size: 16px;
@@ -16,78 +148,15 @@ body{
 }
 
 /* Forms */
-.gcheese{
-  /*background: #13BDC6;*/
-  background: #2dced5;
-}
-.gcheeseContainer{
-  width: 400px;
-  margin: auto;
-}
-form, fieldset, legend, ol, li {
-  margin: 0;
-  padding: 0;
-}
+
 #gcheeseForm {
-  /*background: #13BDC6;*/
-	background: #2dced5;
+	background: #D6E3DF;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	padding: 10px 20px 20px 20px;
-	width: 400px;
 }
-#gcheeseForm fieldset {
-	border: none;
-	margin-bottom: 10px;
-}
-#gcheeseForm fieldset:last-of-type {
-	margin-bottom: 0;
-}
-#gcheeseForm legend {
-	color: #A5438B;
-	font-size: 16px;
-	font-weight: bold;
-	padding-bottom: 10px;
-	text-shadow: 0 1px 1px #F6BFE6;
-}
-/*try out step counter*/
-/*#gcheeseForm > fieldset > legend:before {
-	content: "Step " counter(fieldsets) ": ";
-	counter-increment: fieldsets;
-}*/
-#gcheeseForm fieldset fieldset legend {
-	color: #A5438B;
-	font-size: 13px;
-	font-weight: normal;
-	padding-bottom: 0;
-}
-#gcheeseForm ol li {
-	background: #13BDC6;
-	background: rgba(255,255,255,.3);
-	border-color: #B8EBEE;
-	border-color: rgba(255,255,255,.6);
-	border-style: solid;
-	border-width: 2px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-	line-height: 30px;
-	list-style: none;
-	padding: 5px 10px;
-	margin-bottom: 2px;
-}
-#gcheeseForm ol ol li {
-	background: none;
-	border: none;
-	float: left;
-}
-#gcheeseForm fieldset fieldset label {
-	background:none no-repeat left 50%;
-	line-height: 20px;
-	padding: 0px;
-	width: auto;
-}
+
 #gcheeseForm input:not([type=radio]) {
 	background: #ffffff;
 	border: none;
@@ -107,11 +176,10 @@ form, fieldset, legend, ol, li {
 #gcheeseForm input[type=radio] {
 	float: left;
 	margin-right: 5px;
-  margin-top: 10px;
 }
 #gcheeseForm button {
-	background: #CF2993;
-	border: none;
+	background: #28cac8;
+	border: 2px dotted #fde545;
 	-moz-border-radius: 20px;
 	-webkit-border-radius: 20px;
 	-khtml-border-radius: 20px;
@@ -130,9 +198,9 @@ form, fieldset, legend, ol, li {
 	cursor: pointer;
 }
 /*drop down*/
-.container {
+/*.container {
   text-align: center;
-}
+}*/
 
 .container > .dropdown {
   margin: 0 20px;
@@ -217,21 +285,22 @@ form, fieldset, legend, ol, li {
 }
 
 /* Text styles */
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
 		padding: 0 0 0em 0;
 		margin: 0;
 		color: #404041;
 		line-height: 1.25em;
 		font-weight:700;
 		font-family: 'Lato', sans-serif;
-}
+}*/
+
 /* Heading */
 .header {
-  background-color: #fff;
+  background-color: #28cac8;
 }
 .head-dis{
   text-align: center;
-  background-color: #fff;
+  background-color: #28cac8;
 }
 .headlogo {
   width: 50%;
