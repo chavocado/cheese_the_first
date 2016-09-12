@@ -26,10 +26,6 @@ myApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: '/views/thankyou.html',
       controller: 'OrderController'
     })
-    .when('/menu', {
-      templateUrl: '/views/menu.html',
-      controller: 'MenuController'
-    })
     .when('/edit-menu', {
       templateUrl: '/views/editMenu.html',
       controller: 'EditMenuController'
