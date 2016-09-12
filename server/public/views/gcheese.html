@@ -4,6 +4,7 @@
 <div class="gcheese-container">
   <form id="gcheeseForm">
 
+
     <h2 class="order-title">GRILLED CHEESE GOODNESS</h2>
     <div class="gcheese-list">
 
@@ -26,7 +27,7 @@
         <img src="http://4.bp.blogspot.com/-NfJQ83auups/TtqD2IwLfwI/AAAAAAAANOc/9NynMzHtc70/s800/Roast%2BBeef%2BGrilled%2BCheese%2BSandwich%2B500%2B7975.jpg" alt="gc2" />
         <h4 class="description-price">{{grilledCheeses.gc2.description}}  ${{grilledCheeses.gc2.price}}</h4>
         <div class="dropdown">
-          <select class="dropdown-select" id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.gc1" ng-change="addGC()">
+          <select class="dropdown-select" id="currentGC1" name="grilled_cheese2" ng-model="currentOrder.gc2" ng-change="addGC()">
             <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
           </select>
         </div>
@@ -40,7 +41,7 @@
         <img src="http://4.bp.blogspot.com/-NfJQ83auups/TtqD2IwLfwI/AAAAAAAANOc/9NynMzHtc70/s800/Roast%2BBeef%2BGrilled%2BCheese%2BSandwich%2B500%2B7975.jpg" alt="gc2" />
         <h4 class="description-price">{{grilledCheeses.gc2.description}}  ${{grilledCheeses.gc2.price}}</h4>
         <div class="dropdown">
-          <select class="dropdown-select" id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.gc1" ng-change="addGC()">
+          <select class="dropdown-select" id="currentGC1" name="grilled_cheese3" ng-model="currentOrder.gc3" ng-change="addGC()">
             <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
           </select>
         </div>
@@ -54,7 +55,7 @@
         <img src="http://4.bp.blogspot.com/-NfJQ83auups/TtqD2IwLfwI/AAAAAAAANOc/9NynMzHtc70/s800/Roast%2BBeef%2BGrilled%2BCheese%2BSandwich%2B500%2B7975.jpg" alt="gc2" />
         <h4 class="description-price">{{grilledCheeses.gc2.description}}  ${{grilledCheeses.gc2.price}}</h4>
         <div class="dropdown">
-          <select class="dropdown-select" id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.gc1" ng-change="addGC()">
+          <select class="dropdown-select" id="currentGC1" name="grilled_cheese4" ng-model="currentOrder.gc4" ng-change="addGC()">
             <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
           </select>
         </div>
@@ -67,7 +68,7 @@
 
     <div class="gcheese-checkout">
       <div class="customer-details">
-        <h3>Your Details</h3>
+        <h3>Your Details:</h3>
         <ul>
           <li><label for="name">Name</label>
           <input type="text" placeholder="Full Name" id="currentOrderFirst" name="full_name" ng-model="currentOrder.full_name" required></li>
@@ -83,11 +84,11 @@
         </ul>
       </div>
       <div class="payment">
-        <h3>Payments</h3>
-        <ul>
+        <h3>Payments:</h3>
+        <ul class="total">
           <li><h4>Total ${{currentOrder.gcTotal}}</h4></li>
         </ul>
-        <h3>Payment type</h3>
+        <h3>Payment type:</h3>
         <ul class="payment-type">
           <li><input id="cash" name="payment" type="radio" value="Cash" checked ng-model="currentOrder.payment" required>
               <label for="cash">Cash</label></li>
