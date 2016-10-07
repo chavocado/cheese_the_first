@@ -20,7 +20,7 @@
 .order-title {
   background-color: #f85756;
   text-align: center;
-  color: #3c4f64;
+  color: #white;
   padding: 20px;
   margin: 5px 0 20px 0;
   border: 4px dotted #fde545;
@@ -135,7 +135,7 @@ body{
   font-size: 16px;
   line-height: 1.2em;
   color: #fff;
-  background: #404041;
+  background: #3c4f64;
   margin: 0;
   position: relative;
   width: auto;
@@ -143,14 +143,14 @@ body{
 .home{
   padding-left: 1.5em;
   padding-right: 1.5em;
-  background: #A5438B;
+  background: #0B3059;
   height: 100%;
 }
 
 /* Forms */
 
 #gcheeseForm {
-	background: #D6E3DF;
+	background: #0b3059;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
@@ -296,15 +296,15 @@ body{
 
 /* Heading */
 .header {
-  background-color: #28cac8;
+  background-color: #f85756;
 }
 .head-dis{
   text-align: center;
-  background-color: #28cac8;
+  background-color: #f85756;
 }
 .headlogo {
   width: 50%;
-  max-width: 250px;
+  max-width: 300px;
   height: auto;
 }
 a{
@@ -314,7 +314,7 @@ a{
 /*a:visited {
 }*/
 nav {
-  background-color: #B8EBEE;
+  background-color: ##3C4F64;
   margin: 0;
   min-width: 200px;
 }
@@ -328,15 +328,15 @@ nav a {
   display: inline-block;
   padding: 14px;
   font-weight: normal;
-  color: #404041;
+  color: #white;
   font-size: 1em;
 }
 nav a:hover {
-  color: #13BDC6;
+  color: #fde545;
 }
 
 .footer{
-  background: #404041;
+  background: #3c4f64;
   text-align: center;
   width: 100%;
   bottom: 10px;
