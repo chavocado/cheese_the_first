@@ -52,7 +52,7 @@
   <div class="addSandwich">
 
     <div class="sandwich-modal-form-container">
-      <h2 class="modalHeader">Add Sandwich</h3>
+      <h3 class="modalHeader">Add Sandwich</h3>
       <form class="addSandwichForm">
 
         <div class="row modal-row">
@@ -62,7 +62,7 @@
 
         <div class="row modal-row">
           <label for="newSandwich.description">New Sandwich Description: </label>
-          <input type="textarea" name="newSandwich.description" ng-model="newSandwich.description">
+          <textarea cols=60 rows=4 name="newSandwich.description" ng-model="newSandwich.description"></textarea>
         </div>
 
         <div class="row modal-row">
@@ -92,7 +92,7 @@
   <div class="addSandwich">
 
     <div class="sandwich-modal-form-container">
-      <h2 class="modalHeader">Edit Sandwich</h3>
+      <h2 class="modalHeader">Edit Sandwich</h2>
       <form class="addSandwichForm">
 
         <div class="row modal-row">
@@ -102,7 +102,7 @@
 
         <div class="row modal-row">
           <label for="selectedSandwichToEdit.description">Sandwich Description: </label>
-          <input type="textarea" name="selectedSandwichToEdit.description" ng-model="selectedSandwichToEdit.description">
+          <textarea cols=60 rows=4 name="selectedSandwichToEdit.description" ng-model="selectedSandwichToEdit.description"></textarea>
         </div>
 
         <div class="row modal-row">
@@ -112,8 +112,8 @@
 
         <div class="row modal-row">
           <label for="selectedSandwichToEdit.active">Is the Sandwich Active: </label>
-          <input type="radio" name="active" value="True" ng-model="selectedSandwichToEdit.active" required/> <label for="Active">Active</label>
-          <input type="radio" name="active" value="False" ng-model="selectedSandwichToEdit.active" required/> <label for="Inactive">Inactive</label>
+          <input type="radio" name="active" value="TRUE" ng-model="selectedSandwichToEdit.active" required/> <label for="Active">Active</label>
+          <input type="radio" name="active" value="FALSE" ng-model="selectedSandwichToEdit.active" required/> <label for="Inactive">Inactive</label>
         </div>
 
         <div class="row modal-row">

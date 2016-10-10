@@ -20,7 +20,7 @@ myApp.factory('DataFactory', ['$http', function($http) {
     }
   };
 
-  // var grilledCheeses = {};
+  var grilledCheeses = {};
 
   function getGrilledCheese() {
     $http.get('/cheese')

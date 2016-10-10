@@ -20,7 +20,7 @@
 .order-title {
   background-color: #f85756;
   text-align: center;
-  color: #white;
+  color: #3c4f64;
   padding: 20px;
   margin: 5px 0 20px 0;
   border: 4px dotted #fde545;
@@ -35,7 +35,7 @@
   text-align: center;
 }
 
-.gcheese-sandwich {
+.scholars {
   vertical-align: top;
   width: 48%;
   display: inline-block;
@@ -135,7 +135,7 @@ body{
   font-size: 16px;
   line-height: 1.2em;
   color: #fff;
-  background: #3c4f64;
+  background: #404041;
   margin: 0;
   position: relative;
   width: auto;
@@ -143,14 +143,14 @@ body{
 .home{
   padding-left: 1.5em;
   padding-right: 1.5em;
-  background: #0B3059;
+  background: #A5438B;
   height: 100%;
 }
 
 /* Forms */
 
 #gcheeseForm {
-	background: #0b3059;
+	background: #D6E3DF;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
@@ -304,7 +304,7 @@ body{
 }
 .headlogo {
   width: 50%;
-  max-width: 400px;
+  max-width: 250px;
   height: auto;
 }
 a{
@@ -314,7 +314,7 @@ a{
 /*a:visited {
 }*/
 nav {
-  background-color: ##3C4F64;
+  background-color: #B8EBEE;
   margin: 0;
   min-width: 200px;
 }
@@ -328,15 +328,15 @@ nav a {
   display: inline-block;
   padding: 14px;
   font-weight: normal;
-  color: #white;
+  color: #404041;
   font-size: 1em;
 }
 nav a:hover {
-  color: #fde545;
+  color: #13BDC6;
 }
 
 .footer{
-  background: #3c4f64;
+  background: #404041;
   text-align: center;
   width: 100%;
   bottom: 10px;
