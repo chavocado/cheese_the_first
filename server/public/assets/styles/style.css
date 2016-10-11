@@ -131,7 +131,7 @@ ul {
 }
 
 body{
-  font-family: 'Lato', verdana, arial, sans-serif;
+  font-family: 'Poppins', sans-serif, verdana, arial;
   font-size: 16px;
   line-height: 1.2em;
   color: #fff;
@@ -146,7 +146,9 @@ body{
   background: #0B3059;
   height: 100%;
 }
-
+#scholars li{
+  width: 120px;
+}
 /* Forms */
 
 #gcheeseForm {
@@ -164,7 +166,7 @@ body{
 	-webkit-border-radius: 3px;
 	-khtml-border-radius: 3px;
 	border-radius: 3px;
-	font: italic 13px 'Lato', verdana, arial, sans-serif;
+	font: italic 13px 'Poppins', verdana, arial, sans-serif;
 	outline: none;
 	padding: 5px;
 	width: 200px;
@@ -186,7 +188,7 @@ body{
 	border-radius: 20px;
 	color: #ffffff;
 	display: block;
-	font: 18px 'Lato', verdana, arial, sans-serif;
+	font: 18px 'Poppins', verdana, arial, sans-serif;
 	letter-spacing: 1px;
 	margin: auto;
 	padding: 7px 25px;
@@ -345,7 +347,7 @@ nav a:hover {
 
 /*Table*/
 table {
-		font-family: 'Lato', verdana, arial, sans-serif;
+		font-family: 'Poppins', sans-serif, verdana, arial;
 		font-size: 11px;
 		color: #333333;
 		border-width: 1px;

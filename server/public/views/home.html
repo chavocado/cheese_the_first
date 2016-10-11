@@ -13,7 +13,15 @@
     <br>Email us at <em><strong>ShesthefirstUMN@gmail.com</strong></em> to get involved with our chapter, or visit <a class="links" href="http://campus.shesthefirst.org/UMNtwincities">us here</a> to make a donation to support our fundraising efforts.&nbsp;&nbsp;
     <br>
     <br>
+    <div class="scholars" ng-repeat="scholar in activeScholars">
+      <div>{{scholar.name}}</div>
+      <div>{{scholar.location}}</div>
+      <div><img src="{{scholar.image}}"/></div>
+      <div>{{scholar.bio}}</div>
+    </div>
 </div>
+
+
 
 
 <div ng-include="'/views/templates/footer.html'"></div>
