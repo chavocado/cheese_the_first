@@ -141,13 +141,15 @@ body{
   width: auto;
 }
 .home{
-  padding-left: 1.5em;
-  padding-right: 1.5em;
+  padding-left: 10em;
+  padding-right: 10em;
   background: #0B3059;
   height: 100%;
+  text-align: center;
 }
-#scholars li{
-  width: 120px;
+.scholars{
+  width: auto;
+  text-align: center;
 }
 /* Forms */
 

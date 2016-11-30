@@ -5,7 +5,7 @@ myApp.controller('HomeController', ['$scope', '$http', '$location', 'DataFactory
   //scope variables
   $scope.activeScholars = [];
 
-  getActiveScholars();
+  // getActiveScholars();
 
   //retrieve existing active scholars from selected company
   function getActiveScholars() {
