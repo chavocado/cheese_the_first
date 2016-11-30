@@ -6,13 +6,13 @@ myApp.factory('DataFactory', ['$http', function($http) {
            price : 3,
            description : 'Classic creamy macaroni and cheese, grilled between crisp, buttery bread seasoned with garlic salt.'
     },
-    gc2 : {name :'Bravo Italiano',
-           price : 3,
-           description : 'Mozzarella cheese, freshly sliced tomato, with basil pesto sauce.',
-    },
-    gc3 :  {name :'The OG 3 Cheese',
+    gc2 :  {name :'The OG 3 Cheese',
            price : 3,
            description : 'Cheddar, Swiss and Mozzarella cheeses between crisp buttery bread.'
+    },
+    gc3 : {name :'Bravo Italiano',
+           price : 3,
+           description : 'Mozzarella cheese, freshly sliced tomato, with basil pesto sauce.',
     },
     gc4 :  {name :'The Funky Monkey',
            price : 3,

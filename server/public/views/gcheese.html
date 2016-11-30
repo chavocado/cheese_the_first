@@ -5,12 +5,12 @@
   <form id="gcheeseForm">
 
 
-    <h2 class="order-title">GRILLED CHEESE GOODNESS</h2>
+    <h1 class="order-title">GRILLED CHEESE GOODNESS</h1>
     <div class="gcheese-list">
 
       <div class="gcheese-sandwich">
-        <h3 class="gcheese-name">{{grilledCheeses.gc1.name}}</h3>
-        <img src="http://1.bp.blogspot.com/-jH1SxpdymPk/ToJUY2YBxDI/AAAAAAAAMtU/oiJleZ41Im4/s800/Caprese%2BGrilled%2BCheese%2BSandwich%2B500%2B2161.jpg" alt="gc1" />
+        <h2 class="gcheese-name">{{grilledCheeses.gc1.name}}</h2>
+        <img src="http://i.imgur.com/EHheX8J.jpg" alt="gc1" />
         <h4 class="description-price">{{grilledCheeses.gc1.description}}  ${{grilledCheeses.gc1.price}}</h4>
         <div class="dropdown">
           <select class="dropdown-select" id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.gc1" ng-change="addGC()">
@@ -23,11 +23,11 @@
       </div>
 
       <div class="gcheese-sandwich">
-        <h3 class="gcheese-name">{{grilledCheeses.gc2.name}}</h3>
-        <img src="http://4.bp.blogspot.com/-NfJQ83auups/TtqD2IwLfwI/AAAAAAAANOc/9NynMzHtc70/s800/Roast%2BBeef%2BGrilled%2BCheese%2BSandwich%2B500%2B7975.jpg" alt="gc2" />
+        <h2 class="gcheese-name">{{grilledCheeses.gc2.name}}</h2>
+        <img src="http://i.imgur.com/IDV2PGK.jpg" alt="gc2" />
         <h4 class="description-price">{{grilledCheeses.gc2.description}}  ${{grilledCheeses.gc2.price}}</h4>
         <div class="dropdown">
-          <select class="dropdown-select" id="currentGC1" name="grilled_cheese2" ng-model="currentOrder.gc2" ng-change="addGC()">
+          <select class="dropdown-select" id="currentGC2" name="grilled_cheese2" ng-model="currentOrder.gc2" ng-change="addGC()">
             <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
           </select>
         </div>
@@ -37,11 +37,11 @@
       </div>
 
       <div class="gcheese-sandwich">
-        <h3 class="gcheese-name">{{grilledCheeses.gc2.name}}</h3>
-        <img src="http://4.bp.blogspot.com/-NfJQ83auups/TtqD2IwLfwI/AAAAAAAANOc/9NynMzHtc70/s800/Roast%2BBeef%2BGrilled%2BCheese%2BSandwich%2B500%2B7975.jpg" alt="gc2" />
-        <h4 class="description-price">{{grilledCheeses.gc2.description}}  ${{grilledCheeses.gc2.price}}</h4>
+        <h2 class="gcheese-name">{{grilledCheeses.gc3.name}}</h2>
+        <img src="http://i.imgur.com/l7z3pe3.jpg" alt="gc3" />
+        <h4 class="description-price">{{grilledCheeses.gc3.description}}  ${{grilledCheeses.gc3.price}}</h4>
         <div class="dropdown">
-          <select class="dropdown-select" id="currentGC1" name="grilled_cheese3" ng-model="currentOrder.gc3" ng-change="addGC()">
+          <select class="dropdown-select" id="currentGC3" name="grilled_cheese3" ng-model="currentOrder.gc3" ng-change="addGC()">
             <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
           </select>
         </div>
@@ -51,11 +51,11 @@
       </div>
 
       <div class="gcheese-sandwich">
-        <h3 class="gcheese-name">{{grilledCheeses.gc2.name}}</h3>
-        <img src="http://4.bp.blogspot.com/-NfJQ83auups/TtqD2IwLfwI/AAAAAAAANOc/9NynMzHtc70/s800/Roast%2BBeef%2BGrilled%2BCheese%2BSandwich%2B500%2B7975.jpg" alt="gc2" />
-        <h4 class="description-price">{{grilledCheeses.gc2.description}}  ${{grilledCheeses.gc2.price}}</h4>
+        <h2 class="gcheese-name">{{grilledCheeses.gc4.name}}</h2>
+        <img src="http://i.imgur.com/q0C8ZJR.jpg" alt="gc4" />
+        <h4 class="description-price">{{grilledCheeses.gc4.description}}  ${{grilledCheeses.gc4.price}}</h4>
         <div class="dropdown">
-          <select class="dropdown-select" id="currentGC1" name="grilled_cheese4" ng-model="currentOrder.gc4" ng-change="addGC()">
+          <select class="dropdown-select" id="currentGC4" name="grilled_cheese4" ng-model="currentOrder.gc4" ng-change="addGC()">
             <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
           </select>
         </div>
