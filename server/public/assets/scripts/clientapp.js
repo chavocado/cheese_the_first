@@ -10,15 +10,15 @@ myApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: '/views/gcheese.html',
       controller: 'OrderController'
     })
-    .when('/admin', {
+    .when('/pickles', {
       templateUrl: '/views/admin.html',
       controller: 'AdminController'
     })
-    .when('/admin/orders', {
+    .when('/pickles/orders', {
       templateUrl: '/views/admin-orders.html',
       controller: 'AdminOrderController'
     })
-    .when('/admin/scholars', {
+    .when('/pickles/scholars', {
       templateUrl: '/views/admin-scholars.html',
       controller: 'AdminScholarController'
     })
@@ -26,7 +26,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: '/views/thankyou.html',
       controller: 'OrderController'
     })
-    .when('/edit-menu', {
+    .when('/pickles/edit-menu', {
       templateUrl: '/views/editMenu.html',
       controller: 'EditMenuController'
     })

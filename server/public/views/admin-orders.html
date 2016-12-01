@@ -14,6 +14,7 @@
         <th st-sort="gc2">{{grilledCheeses.gc2.name}}</th>
         <th st-sort="gc3">{{grilledCheeses.gc3.name}}</th>
         <th st-sort="gc4">{{grilledCheeses.gc4.name}}</th>
+        <th>Special Requests</th>
         <th st-sort="total">Order Total</th>
         <th st-sort="payment_type">Payment Type</th>
         <th st-sort="status">Order Status</th>
@@ -32,6 +33,7 @@
       <td>{{order.gc2}}</td>
       <td>{{order.gc3}}</td>
       <td>{{order.gc4}}</td>
+      <td>{{order.special_req}}</td>
       <td>{{order.total | currency}}</td>
       <td>{{order.payment_type | uppercase}}</td>
       <td >{{order.status}}</td>

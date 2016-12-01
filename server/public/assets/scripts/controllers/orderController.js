@@ -23,8 +23,19 @@ myApp.controller('OrderController', ['$scope', '$http', '$location', 'DataFactor
                                    ($scope.deliveryFee));
   };
 
+  //auxilary function
+  // function checkContent() {
+  //   if ($scope.currentOrder.specialReq === undefined) {
+  //       $scope.currentOrder.specialReq = "none";
+  //     }
+  // }
+
   //order submission function
   $scope.submitOrder = function () {
+  if ($scope.currentOrder.specialReq === undefined) {
+    $scope.currentOrder.specialReq = "none";
+      }
+  console.log('now here', 2);
   var data = $scope.currentOrder;
   console.log(data);
   $http.post('/orders', data)

@@ -4,7 +4,7 @@ myApp.factory('DataFactory', ['$http', function($http) {
   var grilledCheeses = {
     gc1 : {name :'The Mac Attack',
            price : 3,
-           description : 'Classic creamy macaroni and cheese, grilled between crisp, buttery bread seasoned with garlic salt.'
+           description : 'Creamy macaroni and cheese, grilled between crisp, buttery bread seasoned with garlic salt.'
     },
     gc2 :  {name :'The OG 3 Cheese',
            price : 3,

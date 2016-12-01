@@ -12,14 +12,13 @@
         <h2 class="gcheese-name">{{grilledCheeses.gc1.name}}</h2>
         <img src="http://i.imgur.com/EHheX8J.jpg" alt="gc1" />
         <h3 class="description-price">{{grilledCheeses.gc1.description}}</h3>
-        <h3 class="description-price"> ${{grilledCheeses.gc1.price}} each</h3>
+        <ul>
+          <li><h3 class="description-price"> ${{grilledCheeses.gc1.price}} each</h3></li>
+        </ul>
         <div class="dropdown">
           <select class="dropdown-select" id="currentGC1" name="grilled_cheese1" ng-model="currentOrder.gc1" ng-change="addGC()">
             <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
           </select>
-        </div>
-        <div class="requests">
-          <textarea cols="60" rows="3" placeholder="Please let us know if you would like any ingredient excluded from your sandwich."></textarea>
         </div>
       </div>
 
@@ -27,14 +26,13 @@
         <h2 class="gcheese-name">{{grilledCheeses.gc2.name}}</h2>
         <img src="http://i.imgur.com/IDV2PGK.jpg" alt="gc2" />
         <h3 class="description-price">{{grilledCheeses.gc2.description}}</h3>
-        <h3 class="description-price">${{grilledCheeses.gc2.price}} each</h3>
+        <ul>
+          <li><h3 class="description-price">${{grilledCheeses.gc2.price}} each</h3></li>
+        </ul>
         <div class="dropdown">
           <select class="dropdown-select" id="currentGC2" name="grilled_cheese2" ng-model="currentOrder.gc2" ng-change="addGC()">
             <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
           </select>
-        </div>
-        <div class="requests">
-          <textarea cols="60" rows="3" placeholder="Please let us know if you would like any ingredient excluded from your sandwich."></textarea>
         </div>
       </div>
 
@@ -42,14 +40,13 @@
         <h2 class="gcheese-name">{{grilledCheeses.gc3.name}}</h2>
         <img src="http://i.imgur.com/l7z3pe3.jpg" alt="gc3" />
         <h3 class="description-price">{{grilledCheeses.gc3.description}}</h3>
-        <h3 class="description-price">${{grilledCheeses.gc3.price}} each</h3>
+        <ul>
+          <li><h3 class="description-price">${{grilledCheeses.gc3.price}} each</h3></li>
+        </ul>
         <div class="dropdown">
           <select class="dropdown-select" id="currentGC3" name="grilled_cheese3" ng-model="currentOrder.gc3" ng-change="addGC()">
             <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
           </select>
-        </div>
-        <div class="requests">
-          <textarea cols="60" rows="3" placeholder="Please let us know if you would like any ingredient excluded from your sandwich."></textarea>
         </div>
       </div>
 
@@ -57,14 +54,13 @@
         <h2 class="gcheese-name">{{grilledCheeses.gc4.name}}</h2>
         <img src="http://i.imgur.com/q0C8ZJR.jpg" alt="gc4" />
         <h3 class="description-price">{{grilledCheeses.gc4.description}}</h3>
-        <h3 class="description-price">${{grilledCheeses.gc4.price}} each</h3>
+        <ul>
+          <li><h3 class="description-price">${{grilledCheeses.gc4.price}} each</h3></li>
+        </ul>
         <div class="dropdown">
           <select class="dropdown-select" id="currentGC4" name="grilled_cheese4" ng-model="currentOrder.gc4" ng-change="addGC()">
             <option ng-repeat="qty in quantity" value="{{qty}}">{{qty}}</option>
           </select>
-        </div>
-        <div class="requests">
-          <textarea cols="60" rows="3" placeholder="Please let us know if you would like any ingredient excluded from your sandwich."></textarea>
         </div>
       </div>
 
@@ -104,9 +100,17 @@
               <label for="card">Card</label></li>
         </ul>
       </div>
+      <div class="requests">
+        <ul>
+          <li><h3>Dietary Restrictions and requests:</h3></li>
+          <li><textarea form="gcheeseForm" ng-model="currentOrder.specialReq" cols="60" rows="3" placeholder="Please let us know if you would like any ingredient excluded from your sandwich."></textarea></li>
+          <li><h3>Contact us at (612)293-7489 if you have any questions about your order.</h3></li>
+        </ul>
+      </div>
       <div class="submit-button">
         <button ng-click="submitOrder()">Submit</button>
       </div>
+
     </div>
 
   </form>
