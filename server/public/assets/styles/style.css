@@ -320,6 +320,9 @@ a{
   text-decoration: none;
   color: #28cac8;
 }
+a:hover{
+  color: #fde545;
+}
 /*a:visited {
 }*/
 nav {
