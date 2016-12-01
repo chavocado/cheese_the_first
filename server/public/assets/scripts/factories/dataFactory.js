@@ -2,25 +2,25 @@ myApp.factory('DataFactory', ['$http', function($http) {
   console.log('dataFactory running');
 
   var grilledCheeses = {
-    gc1 : {name :'Uh-huh Honey',
+    gc1 : {name :'The Mac Attack',
            price : 3,
-           description : 'Crisp sliced apples, cheddar cheese, drizzled honey and a sprinkle of cinnamon.'
+           description : 'Classic creamy macaroni and cheese, grilled between crisp, buttery bread seasoned with garlic salt.'
     },
-    gc2 : {name :'Bravo Italiano',
-           price : 3,
-           description : 'Mozzarella cheese, freshly sliced tomato, with basil pesto sauce.',
-    },
-    gc3 :  {name :'3 Cheese',
+    gc2 :  {name :'The OG 3 Cheese',
            price : 3,
            description : 'Cheddar, Swiss and Mozzarella cheeses between crisp buttery bread.'
     },
-    gc4 :  {name :'Cozy Campfire',
+    gc3 : {name :'Bravo Italiano',
            price : 3,
-           description : 'A s\'mores inspired recipe with melted chocolate chips, crushed graham cracker, and toasty marshmallows.'
+           description : 'Mozzarella cheese, freshly sliced tomato, with basil pesto sauce.',
+    },
+    gc4 :  {name :'The Funky Monkey',
+           price : 3,
+           description : 'A rich combination of banana, melted chocolate chips, peanut butter, and toasty marshmallows.'
     }
   };
 
-  var grilledCheeses = {};
+  // var grilledCheeses = {};
 
   function getGrilledCheese() {
     $http.get('/cheese')

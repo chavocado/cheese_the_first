@@ -6,22 +6,24 @@ var connectionString = require('../modules/connection');
 
 router.post('/', function (req, res) {
   var order = req.body;
-  console.log(order);
+  // console.log(order);
   pg.connect(connectionString, function (err, client, done) {
     if (err) {
       res.sendStatus(500);
     }
-    console.log('connectionString:', connectionString);
-    console.log('client:', client);
-    client.query( 'INSERT INTO customers (full_name, email, address, city) ' +
-                  'VALUES ($1, $2, $3, $4) returning id;',
-                   [order.full_name, order.email, order.address, order.city],
+    //connectionString and client for login.
+    // console.log('connectionString:', connectionString);
+    // console.log('client:', client);
+    client.query( 'INSERT INTO customers (full_name, phone, email, address, city) ' +
+                  'VALUES ($1, $2, $3, $4, $5) returning id;',
+                   [order.full_name, order.phone, order.email, order.address, order.city],
                  function (err, result) {
                    if (err) {
                      res.sendStatus(500);
                      return;
                    }
-                   console.log('result',result.rows[0].id);
+                   //here is the result row returning id
+                   //console.log('result',result.rows[0].id);
                    client.query('INSERT INTO orders (customer_id, payment_type, total, gc1, gc2, gc3, gc4, status)' +
                                 'VALUES ($1, $2, $3, $4, $5, $6, $7, $8)',
                                 [result.rows[0].id, order.payment, order.gcTotal, order.gc1, order.gc2, order.gc3, order.gc4, 'Recieved'],

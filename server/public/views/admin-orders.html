@@ -8,10 +8,12 @@
         <th st-sort="moment_date" >Order Time</th>
         <th>Name</th>
         <th>Address</th>
-        <th st-sort="gc1">GC1</th>
-        <th st-sort="gc2">GC2</th>
-        <th st-sort="gc3">GC3</th>
-        <th st-sort="gc4">GC4</th>
+        <th>Phone #</th>
+        <th>Email</th>
+        <th st-sort="gc1">{{grilledCheeses.gc1.name}}</th>
+        <th st-sort="gc2">{{grilledCheeses.gc2.name}}</th>
+        <th st-sort="gc3">{{grilledCheeses.gc3.name}}</th>
+        <th st-sort="gc4">{{grilledCheeses.gc4.name}}</th>
         <th st-sort="total">Order Total</th>
         <th st-sort="payment_type">Payment Type</th>
         <th st-sort="status">Order Status</th>
@@ -24,6 +26,8 @@
       <td>{{order.moment_date}}</td>
       <td>{{order.full_name}}</td>
       <td>{{order.address}} {{order.city}}</td>
+      <td>{{order.phone}}</td>
+      <td>{{order.email}}</td>
       <td>{{order.gc1}}</td>
       <td>{{order.gc2}}</td>
       <td>{{order.gc3}}</td>

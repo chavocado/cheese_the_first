@@ -1,7 +1,7 @@
 {
   "name": "cheesethefirst",
   "version": "1.0.0",
-  "description": "This app will help facilitate fundraising for the organization \"She's The First\"",
+  "description": "This app will help facilitate fundraising for the non-profit organization \"She's The First\"",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
