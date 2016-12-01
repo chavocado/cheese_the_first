@@ -3,6 +3,10 @@
 }*/
 
 /***** admin page *****/
+.orders{
+  text-align: center;
+}
+
 .orders-table {
   width: 100%;
 }
