@@ -22,15 +22,15 @@ Stretch Goals
 
 Homepage with Description of Organization:
 * A landing page with a brief description of the Organization and the Chapter donation links
-* Carousel of images
+* Video provided by the Organization
 
-Stylesheet Integration for Mobile Devices:
+Stylesheet Integration:
 A majority of users who partake in ordering grilled cheeses have been University Students with mobile devices. That being a tool for users to view and access the web, dedicated stylesheet integration for mobile browsing.
 * bootstrap vs media queries...
 
 Editable Menu:
 * An Admin Feature that will allow said user to edit name, price and description of menu items
-* Potential image to go along with description
+* Static Images to go along with description
 
 Admin Authorization w/ Views:
 * Admin authorization/login and verification for admin views through Google OAuth
@@ -43,8 +43,8 @@ Staff Views:
 * staff view of said orders to complete
 
 Order Views:
-* Square ecommerce API integration for orders
-* Timer at landing page to display time that has passed
+* Square ecommerce API integration for orders //asked to be removed until 2nd location is acquired
+* Timer and order # at landing page to display time that has passed
 * Thank you Email integration.
 
 Assumptions:
@@ -52,7 +52,7 @@ While completing this estimate the following assumptions were made.
 
 Number of Sandwiches as options will not change
 
-No monetary transactions online all in person
+No monetary transactions online for the first fundraiser.
 
 Admin page will be temporarily not secure in lieu of authorization Stretch goal.
 
