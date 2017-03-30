@@ -76,11 +76,14 @@
           <li><label for="phone">Phone</label>
           <input type="text" placeholder="Your Phone" id="currentPhone" name="phone" ng-model="currentOrder.phone" required></li>
 
-          <li><label for="email">Email</label>
+          <li><label for="email">Email  </label>
           <input type="text" placeholder="email@example.com" id="currentEmail" name="email" ng-model="currentOrder.email"></li>
 
           <li><label for="address">Address</label>
           <input type="text" placeholder="Your Address" id="currentOrderAddress" name="address" ng-model="currentOrder.address" required></li>
+
+          <li><label for="address2">Address 2</label>
+          <input type="text" placeholder="Building Name, Apt, Lot, Dorm" id="currentOrderAddress2" name="address2" ng-model="currentOrder.address2" ></li>
 
           <li><label for="city">City</label>
           <input type="text" placeholder="Your City" id="currentOrderCity" name="city" ng-model="currentOrder.city" required></li>
@@ -104,7 +107,7 @@
         <ul>
           <li><h3>Dietary Restrictions and requests:</h3></li>
           <li><textarea form="gcheeseForm" ng-model="currentOrder.specialReq" cols="60" rows="3" placeholder="Please let us know if you would like any ingredient excluded from your sandwich."></textarea></li>
-          <li><h3>Contact us at (612)293-7489 if you have any questions about your order.</h3></li>
+          <li><h3>Contact us at (612)293-7489 if you would like to pick up your order for no delivery charge.</h3></li>
         </ul>
       </div>
       <div class="submit-button">

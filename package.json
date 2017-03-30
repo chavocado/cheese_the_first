@@ -14,7 +14,7 @@
     "the",
     "first"
   ],
-  "author": "Daniel \"Chavo\" Chavez, Sion \"Siondor\" Owen",
+  "author": "Daniel \"Chavo\" Chavez",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.6",
